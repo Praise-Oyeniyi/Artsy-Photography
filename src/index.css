@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .flex-center{
+    @apply flex justify-between items-center w-full;
+  }
+  .flex-column{
+    @apply flex flex-col;
+  }
+  .see-more{
+    @apply h-12 text-24 p-4 border-black border rounded-md w-[18%] mx-auto flex-center justify-center my-10 m-headings;
+  }
+  .np-button{
+    @apply bg-np-button-bg h-10 w-10 rounded-full ;
+  }
+  .text-32{
+    @apply text-3xl;
+  }
+  .text-36{
+    @apply text-4xl font-bold text-black ;
+  }
+  .text-24{
+    @apply text-xl font-normal;
+  }
+  .text-80{
+    @apply text-7xl font-bold ;
+  }
+  .text-28{
+    @apply text-[1.5rem];
+  }
+  .text-26{
+    @apply text-[1.3rem] font-normal;
+  }
+  .text-48{
+    @apply text-5xl font-normal;
+  }
+  .text-40{
+    @apply text-[2rem] font-medium;
+  }
+  .text-15{
+    @apply text-base;
+  }
+  .text-55{
+    @apply text-[3.5rem] font-bold;
+  }
+  .featured-avatar{
+    @apply absolute top-0 h-full w-auto;
+  }
+  .featured-product-text {
+    @apply w-full flex flex-col justify-evenly;
+  }
+  .border-radius{
+    @apply border rounded-md ;
+  }
+
+
+/* Homepage */
+  .featured-border{
+    @apply border-b-main-text border-b pb-10;
+  }
+  .featured-product-img{
+    @apply w-full relative hover:scale-x-[1.01] border-x-4 border-x-[transparent]  transition-all ease-out duration-[.5s];
+  }
+  .featured-pd-effect{
+    @apply w-full h-full absolute top-0 left-0 bg-black bg-opacity-70 flex-center justify-center space-x-5 opacity-0;
+  }
+  .featured-pd-effect-text{
+    @apply text-white text-28;
+  }
+
+
+  /* Featured detailed*/
+  .ft-desc-explore-font{
+    @apply text-main-text place-self-end text-3xl;
+  }
+  .desc-accordion-title{
+    @apply flex-center;
+  }
+
+
+
+/* MarketPlace */
+  .checked-box{
+    @apply  w-full relative top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] p-1;
+  }
+  .c-filter-container{
+    @apply flex-center justify-start space-x-2;
+  }
+  .c-filter-checked{
+    @apply w-6 bg-box-bg h-6 rounded-md relative;
+  }
+  .m-headings{
+    @apply font-medium;
+  }
+  .filter-items{
+    @apply w-[25%] p-4 bg-white rounded-md space-y-2;
+  }
+  .filter-image{
+    @apply bg-black h-full object-cover w-full rounded-md ;
+  }
+
+
+  /* AuctionsPage */
+  .auctions-img-text{
+    @apply w-4/6 mx-auto text-body-bg text-40 py-2 px-4 absolute bottom-10 text-center left-[50%] -translate-x-[50%] bg-auc-text-bg rounded-md border-[.5px] border-body-bg;
+  }
+  .creator-container-inner{
+    @apply rounded-lg flex flex-col;
+  }
+  .heart-icon{
+    @apply h-12 w-12 border rounded-full p-3 my-3 self-end mx-4;
+  }
+  .creator-info{
+    @apply text-auc-creator-text text-32 space-y-7;
+  }
+  .creator-info-text{
+    @apply flex-center font-medium;
+  }
+  .creator-span{
+    @apply font-bold text-main-text w-4/6;
+  }
+  .creator-button{
+    @apply bg-blue h-14 w-3/6 text-white text-26 px-4;
+  }
+  .explore-btn{
+    @apply  mr-[8.5%] h-12;
+  }
+  .featured-border{
+    @apply border-b-main-text border-b pb-10;
+  }
+  .auctions-img-outer{
+    @apply  relative hover:scale-[.75] transition-all ease-out duration-[.5s] hover:top-[-3rem] hover:left-[-4rem];
+  }
+  .auctions-img-hover{
+    @apply absolute top-0 left-0 bg-black w-full h-full rounded-3xl flex-center justify-center bg-opacity-50 opacity-0;
+  }
+  /* .featured-pd-effect-text{
+    @apply text-white text-28;
+  } */
+
+
+
+
+
+  /* DropPage */
+  .notification-box-outer{
+    @apply flex-center items-start gap-x-10;
+  }
+  .notification-box-left{
+    @apply  relative w-[55%];
+  }
+  .notifications-text-box{
+    @apply w-5/6 left-[50%] font-normal py-2 px-4 translate-x-[-50%] absolute bottom-5 text-auctions-text bg-auc-text-bg rounded-md border-[.5px] border-body-bg;
+  }
+  .notification-box-right{
+    @apply w-[43%] font-normal space-y-6 ;
+  }
+  .notify-image{
+    @apply w-full h-[22rem] relative;
+  }
+}
