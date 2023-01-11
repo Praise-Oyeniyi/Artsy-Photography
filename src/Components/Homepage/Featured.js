@@ -31,7 +31,7 @@ const Featured = ({next, useNavigate, FtData}) => {
                 </div>
 
                 <div className={`featured-product-text ${e.id%2===0? 'order-1':''}`}>
-                  <h3 className='text-40 '>{e.title}</h3>
+                  <h3 className='text-40 '>{e.name}</h3>
                   <p className='text-24'>{e.description}</p>
                   <div className='flex-center'>
 

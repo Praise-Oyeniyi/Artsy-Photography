@@ -1,7 +1,6 @@
 import React from 'react'
 import Nav from './../Nav'
 import { useParams, NavLink} from 'react-router-dom';
-import imgHolder from './../Images/FtDesc1.png';
 import { useState } from 'react';
 import Explore1 from './../Images/explore1.png';
 import Explore2 from './../Images/explore2.png';
@@ -14,24 +13,30 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 
-const FtDescription = ({FtData}) => {
+const FtDescription = ({FtData, FilterData}) => {
     var [count, UpdateCounter] = useState(1);
-    const {id} = useParams()
-    const selected = FtData.find(prod => String(prod.id) === id);
+    const {id} = useParams();
+    var selected
+    if(id>=10){
+        selected = FilterData.find(prod => String(prod.id) === id);
+    }else{
+        selected = FtData.find(prod => String(prod.id) === id);
+    }
+
 
   return (
     <div className='w-full ftdescription-outer space-y-10 bg-body-bg overflow-x-hidden py-10 text-header-p font-normal mb-56'>
         <div className="w-5/6 mx-auto">
             <Nav/>
-            <div className="ftdescription-body mt-16 space-y-10">
+            <div className="ftdescription-body mt-16 space-y-10 w-[95%] mx-auto">
                 <h4 className="text-24 cursor-pointer"><NavLink to='/'><span className='text-[#BCB7B7]'>Home/</span></NavLink>Marketplace/ Editorials/ Philomena ‘22</h4>
                 
-                <div className='flex-center items-start justify-start border'>
-                    <img src={imgHolder} alt="" className='py-8 px-4 h-[52.5em] w-5/6'/>
+                <div className='flex-center items-center justify-start border'>
+                    <img src={selected.id >=10? selected.image:selected.bigImage} alt="" className={`py-8 px-4 h-[52.5em] w-full ${selected.id >=10? 'w-3/6':''}`}/>
 
                     <div className="desc-text-area w-full border-l">
                         <div className="desc-title-area border-b py-10 px-5 flex-center">
-                            <h3 className='text-48 font-bold'>{selected.title}</h3>
+                            <h3 className='text-40 font-bold'>{selected.name}</h3>
                             <div className="desc-price flex items-center gap-x-3 text-4xl">
                                 <i className="fa-brands fa-ethereum text-main-text"></i>
                                 <h5 className='text-32 font-medium'>{selected.price}</h5>
@@ -39,8 +44,8 @@ const FtDescription = ({FtData}) => {
                         </div>
 
                         <div className="desc-buy py-10 px-5 border-b space-y-3 ">
-                            <h4 className='text-32 text-drop-text'>Creator : <span className='text-light-blue font-medium'>{selected.creator}</span></h4>
-                            <p className='text-24 text-black'>{selected.country}</p>
+                            <h4 className='text-32 text-drop-text'>Creator : <span className='text-light-blue font-medium'>{selected.creator===undefined?'Ali Dawa':selected.creator}</span></h4>
+                            <p className='text-24 text-black'>{selected.country===undefined?'Made In Italy':selected.country}</p>
                             <h5 className='text-28 font-medium'>Total views: <span>{selected.views}</span></h5>
                             <div className="desc-amount text-36 flex space-x-3">
                                 <button onClick={()=>count >1? UpdateCounter(count--): ''}>-</button>
