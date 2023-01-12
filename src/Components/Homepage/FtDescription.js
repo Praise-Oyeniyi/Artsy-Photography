@@ -5,6 +5,8 @@ import { useState } from 'react';
 import Explore1 from './../Images/explore1.png';
 import Explore2 from './../Images/explore2.png';
 import { faHeart} from '@fortawesome/free-regular-svg-icons';
+import {FaHeart} from 'react-icons/fa';
+import {AiOutlineHeart} from 'react-icons/ai'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
@@ -13,23 +15,39 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 
-const FtDescription = ({FtData, FilterData}) => {
+const FtDescription = ({FtData, FilterData, cart, Atcart}) => {
+    const [like, Updatelike] = useState(false)
     var [count, UpdateCounter] = useState(1);
     const {id} = useParams();
-    var selected
+
+    var selected;
     if(id>=10){
         selected = FilterData.find(prod => String(prod.id) === id);
     }else{
         selected = FtData.find(prod => String(prod.id) === id);
     }
 
+    const cartItems =(operation)=>{
+        if(operation === 'minus' && count === 0){
+            count = 0;
+        }else if(operation === 'minus' && count >= 1){
+            count--;
+        }else if(operation === 'plus'){
+            count++;
+        }
+        return UpdateCounter(count);
+    }
+
+    
+
+
 
   return (
     <div className='w-full ftdescription-outer space-y-10 bg-body-bg overflow-x-hidden py-10 text-header-p font-normal mb-56'>
         <div className="w-5/6 mx-auto">
-            <Nav/>
+            <Nav cart={cart}/>
             <div className="ftdescription-body mt-16 space-y-10 w-[95%] mx-auto">
-                <h4 className="text-24 cursor-pointer"><NavLink to='/'><span className='text-[#BCB7B7]'>Home/</span></NavLink>Marketplace/ Editorials/ Philomena ‘22</h4>
+                <h4 className="text-24 cursor-pointer"><NavLink to='/'><span className='text-[#BCB7B7]'>Home/</span></NavLink>{`Marketplace/ Editorials/ ${selected.name}`}</h4>
                 
                 <div className='flex-center items-center justify-start border'>
                     <img src={selected.id >=10? selected.image:selected.bigImage} alt="" className={`py-8 px-4 h-[52.5em] w-full ${selected.id >=10? 'w-3/6':''}`}/>
@@ -48,13 +66,16 @@ const FtDescription = ({FtData, FilterData}) => {
                             <p className='text-24 text-black'>{selected.country===undefined?'Made In Italy':selected.country}</p>
                             <h5 className='text-28 font-medium'>Total views: <span>{selected.views}</span></h5>
                             <div className="desc-amount text-36 flex space-x-3">
-                                <button onClick={()=>count >1? UpdateCounter(count--): ''}>-</button>
+                                <button onClick={()=>cartItems('minus')}>-</button>
                                 <p>{count}</p>
-                                <button onClick={()=>UpdateCounter(count++)}>+</button>
+                                <button onClick={()=>cartItems('plus')}>+</button>
                             </div>
                             <div className="desc-add-to-cart w-5/6 flex pt-8 pb-4 gap-x-5">
-                                <button className='text-26 bg-blue text-body-bg w-4/6 py-3'>Add to cart </button>
-                                <button className='border border-header-p w-[13%]'><i className="far fa-heart text-header-p text-3xl font-thin"></i></button>
+                                <button className='text-26 bg-blue text-body-bg w-4/6 py-3' onClick={()=>Atcart(selected, count)}>Add to cart </button>
+                                <button 
+                                    className='border border-header-p w-[13%] flex-center justify-center' onClick={()=>Updatelike(!like)}>
+                                    {like===false?<AiOutlineHeart className="text-header-p text-4xl font-thin"/>: <FaHeart className="text-red text-3xl font-thin"/>}
+                                    </button>
                             </div>
                         </div>
 

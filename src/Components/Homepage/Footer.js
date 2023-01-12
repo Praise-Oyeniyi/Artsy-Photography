@@ -1,6 +1,6 @@
 
-import mail from './../Icons/Vector7.svg'
-import location from './../Icons/Vector8.svg'
+import {AiOutlineMail} from 'react-icons/ai'
+import {FiMapPin} from 'react-icons/fi'
 
 
 
@@ -40,8 +40,8 @@ const Footer = ({useNavigate}) => {
             <li>High Bids</li>
           </ul>
           <ul className='space-y-7 text-26 self-start'>
-            <li className='flex items-center'><i className="far fa-envelope text-4xl text-black pr-3"></i>artsystudios@gmail.com</li>
-            <li className='flex items-center'><i className="fas fa-location-dot text-4xl text-black pr-4"></i>Lagos, Nigeria.</li>
+            <li className='flex items-center'><AiOutlineMail className=" text-4xl text-black mr-3"/>artsystudios@gmail.com</li>
+            <li className='flex items-center'><FiMapPin className="fas fa-location-dot text-4xl text-black mr-4"/>Lagos, Nigeria.</li>
           </ul>
         </div>
         <h3 className="copyright text-center text-gray-500 font-medium py-8 text-base">

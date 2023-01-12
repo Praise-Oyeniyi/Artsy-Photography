@@ -11,7 +11,7 @@ const FilterResults = ({filterAll}) => {
             filterAll.map(e=>(
             <div className='filter-items' key={e.id} onClick={()=>navigate(`/market/${e.id}`)}>
                 <img src={e.image} alt='filtered-show' className='filter-image'/>
-                <p className='text-22'>{e.name}</p>
+                <p className='text-22 uppercase'>{e.name}</p>
                 <h4 className='text-28 font-bold'>{'$'+e.price}</h4>
             </div>
             ))

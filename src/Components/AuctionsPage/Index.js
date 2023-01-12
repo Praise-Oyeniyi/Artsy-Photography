@@ -1,15 +1,15 @@
 import Cimage from './../Images/create-image.png';
 import Heart from './../Icons/Vector12.svg';
 
-const Index = ({Nav,NavLink, useNavigate, AuctionsData}) => {
+const Index = ({Nav,NavLink, useNavigate, AuctionsData, cart}) => {
   const navigate = useNavigate();
 
   return (
     <div className='w-full auctions-outer space-y-10 bg-body-bg overflow-x-hidden py-10 text-header-p font-normal mb-56'>
       <div className="w-5/6 mx-auto">
-        <Nav/>
+        <Nav cart={cart}/>
         <div className="auction-body mt-16 space-y-10">
-          <h4 className="text-24"><NavLink to='/'><span className='text-[#BCB7B7]'>Home/</span></NavLink>Auctions</h4>
+          <h4 className="text-24 font-semibold"><NavLink to='/'><span className='text-[#BCB7B7]'>Home/</span></NavLink>Auctions</h4>
           <h3 className="text-28">Here’s an overview of products actively on auction, explore!</h3>
 
           <section className="slider-outer relative w-full h-96">

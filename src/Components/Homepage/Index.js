@@ -7,10 +7,10 @@ import Creators from './Creators';
 import Footer from './Footer';
 import { FtData } from './FeaturedData';
 
-const Index = ({Nav, next, useNavigate}) => {
+const Index = ({Nav, next, useNavigate,cart}) => {
   return (
     <div className='mx-auto w-full space-y-10 overflow-x-hidden bg-body-bg text-header-p text-base'>
-        <Header Nav={Nav}/>
+        <Header Nav={Nav} cart={cart}/>
         <Slider/>
         <Featured next={next} useNavigate={useNavigate} FtData={FtData}/>
         <Auctions next={next} useNavigate={useNavigate}/>
