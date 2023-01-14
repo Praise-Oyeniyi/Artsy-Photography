@@ -160,4 +160,19 @@
   .notify-image{
     @apply w-full h-[22rem] relative;
   }
+
+
+  /* Form Styles */
+  .form-control{
+    @apply  flex-column space-y-2;
+  }
+  .label{
+    @apply text-24 font-normal;
+  }
+  .form-input{
+    @apply h-14 border border-[#747474] rounded-lg bg-[#F2F2F2] outline-none text-24 pl-8 accent-[#888888];
+  }
+  .form-control-inner{
+    @apply flex-center justify-start space-x-2;
+  }
 }

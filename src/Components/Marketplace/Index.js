@@ -33,8 +33,7 @@ const Index = ({Nav, cart}) => {
 
         <div className='body w-full'>
           <FilterTop filterAll={filterAll} searched={searched}/>
-
-
+          
           <div className="filter w-full flex justify-between items-start">
             <FilterOptions filterControl={filterControl}/>
             <FilterResults filterAll={filterAll}/>

@@ -8,9 +8,9 @@ const FilterTop = ({filterAll, searched}) => {
         <div className='counter-box w-[80%] h-14 flex-center px-4 py-2 bg-white rounded-lg text-24'>
             <p>{`See ${filterAll.length >=1? filterAll.length : '9'} of 9 results`}</p>
             <select name='filter-how' className='border border-black rounded-md py-1 p-4 outline-none m-headings text-[rgba(0, 0, 0, 1)]'>
-            <option value="" disabled selected> Sort By</option>
-            <option value="popular">Popular</option>
-            <option value="lowest">Lowest</option>
+              <option value="" disabled selected> Sort By</option>
+              <option value="popular">Popular</option>
+              <option value="lowest">Lowest</option>
             </select>
         </div>
         </div>
