@@ -32,15 +32,15 @@ const CartNotEmpty = ({cart,deleteItem,navigate,Half, Halved }) => {
 
   return (
     <div className="cart-main-inner ">
-                <ul className={`flex-center w-4/6 mx-auto text-24 border-b border-grey ${Half?'mb-14':'mb-16'}`}>
-                    <li className='border-b pb-2'>Shopping Cart</li>
-                    <li className='border-b pb-2' onClick={()=>Halved(!Half)}>Shipping Details</li>
+                <ul className={`flex-center w-4/6 mx-auto text-24 border-b border-grey cursor-pointer mb-16`}>
+                    <li className='border-b pb-2 ' onClick={()=>Halved(false)}>Shopping Cart</li>
+                    <li className='border-b pb-2' onClick={()=>Halved(true)}>Shipping Details</li>
                     <li className='border-b pb-2'>Payment Details</li>
                 </ul>
 
                 <div className={`carts-items-outer relative ${Half?'flex-center items-start gap-x-10':'mb-48'}`}>
                     <DetailsForm Half={Half}/>
-                    <div className="carts space-y-10 !w-full h-[95vh] overflow-y-auto relative top-0">
+                    <div className={`carts space-y-10  ${Half?'!w-full h-[95vh] overflow-y-auto relative top-0':''}`}>
                         {cart.map((e, index)=>(
                             <div className={`cart-item flex-center items-start border-b border-grey pb-10`} key={index}>
                                 <div className={`cart-item-left flex-center justify-start items-stretch ${Half?'gap-x-7':'gap-x-10'}`}>
