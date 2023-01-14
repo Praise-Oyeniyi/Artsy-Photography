@@ -2,12 +2,9 @@ import React from 'react'
 import Nav from './../Nav'
 import { useParams, NavLink} from 'react-router-dom';
 import { useState } from 'react';
-import Explore1 from './../Images/explore1.png';
-import Explore2 from './../Images/explore2.png';
-import { faHeart} from '@fortawesome/free-regular-svg-icons';
 import {FaHeart} from 'react-icons/fa';
 import {AiOutlineHeart} from 'react-icons/ai'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Explore } from './FeaturedData';
 
 
 
@@ -113,42 +110,22 @@ const FtDescription = ({FtData, FilterData, cart, Atcart}) => {
                         </div>
                     </div>
                     <div>
-                        <div className="explore-images flex-center justify-start gap-x-8 max-w-full overflow-hidden">
-                            <div className="flex-column h-full space-y-3 p-3 border border-[#333] w-3/6">
-                                <FontAwesomeIcon icon={faHeart} className='ft-desc-explore-font'/>
-                                <img src={Explore1} alt="" className=' h-72'/>
-                                <div className='text-32 font-medium flex-center'>
-                                    <h3 >Sassy</h3>
-                                    <div>
-                                        <img src="" alt="" />
-                                        <h4>3.20</h4>
-                                    </div>
-                                </div>
-                            </div>
+                        <div className="explore-images flex-center justify-start gap-x-8 w-5/6 overflow-x-auto">
 
-                            <div className="flex-column h-full space-y-3 p-3 border border-[#333] w-3/6">
-                                <FontAwesomeIcon icon={faHeart} className='ft-desc-explore-font'/>
-                                <img src={Explore2} alt="" className='h-72'/>
-                                <div className='text-32 font-medium flex-center'>
-                                    <h3 >Escape</h3>
-                                    <div>
-                                        <img src="" alt="" />
-                                        <h4>0.03</h4>
+                            {Explore.map((e,index)=>(
+                                <div className="flex-column  space-y-3 p-3 border border-[#333] !w-[30rem]" key={index}>
+                                    <AiOutlineHeart className="ft-desc-explore-font"/>
+                                    <img src={e.image} alt="" className=' h-72 !w-80'/>
+                                    <div className='text-32 font-medium flex-center'>
+                                        <h3 >{e.name}</h3>
+                                        <div>
+                                            <img src="" alt="" />
+                                            <h4>{e.price}</h4>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div className="flex-column h-full space-y-3 p-3 border border-[#333] w-3/6">
-                                <FontAwesomeIcon icon={faHeart} className='ft-desc-explore-font'/>
-                                <img src={Explore2} alt="" className='h-72'/>
-                                <div className='text-32 font-medium flex-center'>
-                                    <h3 >Escape</h3>
-                                    <div>
-                                        <img src="" alt="" />
-                                        <h4>0.03</h4>
-                                    </div>
-                                </div>
-                            </div>
+                            ))}
+                            
                         </div>
 
                     </div>

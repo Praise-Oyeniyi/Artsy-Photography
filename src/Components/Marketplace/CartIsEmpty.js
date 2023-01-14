@@ -1,7 +1,7 @@
 import React from 'react'
-import Icon1 from './Images/empty1.png'
-import Icon2 from './Images/empty2.png'
-import Icon3 from './Images/empty.png'
+import Icon1 from '../Images/empty1.png'
+import Icon2 from '../Images/empty2.png'
+import Icon3 from '../Images/empty.png'
 
 const CartIsEmpty = ({navigate}) => {
   return (

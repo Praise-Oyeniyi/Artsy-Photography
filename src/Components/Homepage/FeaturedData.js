@@ -4,6 +4,13 @@ import Featured3 from './../Images/Featured3.png'
 import imgHolder from './../Images/FtDesc1.png';
 
 
+import Explore1 from './../Images/explore1.png';
+import Explore2 from './../Images/explore2.png';
+import Explore3 from './../Images/explore3.png';
+import Explore4 from './../Images/explore4.png';
+import Explore5 from './../Images/explore5.png';
+
+
 export const FtData =[
     {
         id:1,
@@ -40,5 +47,33 @@ export const FtData =[
         price:'0.10',
         views: '1.3M Views',
 
+    },
+]
+
+export const Explore = [
+    {
+    image:Explore1,
+    name: 'Sassy',
+    price:'3.20'
+    },
+    {
+    image:Explore2,
+    name: 'Escape',
+    price:'0.03'
+    },
+    {
+    image:Explore3,
+    name: 'Artsy',
+    price:'3.45'
+    },
+    {
+    image:Explore4,
+    name: 'Christine',
+    price:'2.30'
+    },
+    {
+    image:Explore5,
+    name: 'Sassy',
+    price:'3.20'
     },
 ]

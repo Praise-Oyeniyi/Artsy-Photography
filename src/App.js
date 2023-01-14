@@ -11,7 +11,7 @@ import FtDescription from './Components/Homepage/FtDescription';
 import AuctionLive from './Components/AuctionsPage/AuctionLive';
 import { AuctionsData } from './Components/AuctionsPage/AuctionsData';
 import { FilterData } from './Components/Marketplace/FilterData';
-import CartPage from './Components/CartPage';
+import CartPage from './Components/Marketplace/CartPage';
 import { useState, useEffect } from 'react';
 
 
