@@ -10,14 +10,14 @@ const Index = ({Nav,NavLink, useNavigate, cart}) => {
         <div className="w-5/6 mx-auto">
             <Nav cart={cart}/>
             <div className="drop-body mt-16 space-y-10">
-                <h4 className="text-24 font-semibold"><span className='text-[#BCB7B7]'><NavLink to='/'>Home/</NavLink><NavLink to='/AuctionsPage'>Auctions/Live bid/</NavLink></span>Drop</h4>
+                <h4 className="text-24 font-semibold"><span className='text-[#BCB7B7]'><NavLink to='/'>Home / </NavLink><NavLink to='/AuctionsPage'>Auctions / Live bid / </NavLink></span>Drop</h4>
                 
                 <main className="drop-main text-center space-y-8">
                     <h3 className="text-48 font-medium">
                         Upcoming drops
                     </h3>
                     <p className="text-32 font-normal text-drop-text">Turn on notifications so that no drops will miss you.</p>
-                    <button className="text-28 font-medium w-[25%] border py-2 rounded-md">Notify Me</button>
+                    <button className="text-28 font-semibold w-[25%] border py-2 rounded-md">Notify Me</button>
                 </main>
 
                 <section className="notifications-outer pt-10">

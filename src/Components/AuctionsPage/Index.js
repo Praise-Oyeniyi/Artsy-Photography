@@ -1,4 +1,6 @@
 import Cimage from './../Images/create-image.png';
+import Cimage1 from './../Images/create-image1.png';
+
 import Heart from './../Icons/Vector12.svg';
 
 const Index = ({Nav,NavLink, useNavigate, AuctionsData, cart}) => {
@@ -10,7 +12,7 @@ const Index = ({Nav,NavLink, useNavigate, AuctionsData, cart}) => {
         <Nav cart={cart}/>
         <div className="auction-body mt-16 space-y-10">
           <h4 className="text-24 font-semibold"><NavLink to='/'><span className='text-[#BCB7B7]'>Home/</span></NavLink>Auctions</h4>
-          <h3 className="text-28">Here’s an overview of products actively on auction, explore!</h3>
+          <h3 className="text-28 font-bold">Here’s an overview of products actively on auction, explore!</h3>
 
           <section className="slider-outer relative w-full h-96">
             <div className="slider absolute w-screen left-0 top-0 flex-center gap-x-5">
@@ -19,7 +21,7 @@ const Index = ({Nav,NavLink, useNavigate, AuctionsData, cart}) => {
                 <div className="relative auctions-img-outer" key={e.id}>
                   <div className='auctions-img'>
                     <img src={e.image} alt="" className='relative '/>
-                    <h3 className='auctions-img-text z-10'>{e.time}</h3>
+                    <h3 className='auctions-img-text z-10 nav-logo'>{e.time}</h3>
                   </div>
                   <div className='auctions-img-hover space-x-3 overflow-hidden' onClick={()=>navigate(`/auctions/live-bid/${e.name}`)}>
                     <p className='text-32 text-white' >Join Livestream</p>
@@ -66,7 +68,7 @@ const Index = ({Nav,NavLink, useNavigate, AuctionsData, cart}) => {
               <div className="creator-container space-y-8 w-3/6">
                 <div className='creator-container-inner '>
                   <img src={Heart} alt="icon" className='heart-icon '/>
-                  <div className='h-[280px] bg-creator-two-bg rounded-md'></div>
+                  <img src={Cimage1} alt="creator-main" className='h-full'/>
                   <h3 className='text-32 font-bold px-8 py-6'>Falling apart</h3>
                 </div>
                 <div className="creator-info ">

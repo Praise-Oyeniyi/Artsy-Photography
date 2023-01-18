@@ -7,11 +7,11 @@ module.exports = {
     extend: {
       keyframes: {
         changeBg: { 
-          '0%, 40%': { backgroundImage: 'url("../src/Components/Images/pic1.png")', backgroundColor:'#cccccc6b', },
-          '41%':{opacity:0.4,},
-          '43%, 80%': {opacity:1, backgroundImage: 'url("../src/Components/Images/creatorBg2.png")',},
-          '81%':{opacity:0.4,},
-          '83%, 100%': {opacity:1, backgroundImage: 'url("../src/Components/Images/creatorBg3.png")'},
+          '0%, 40%': { backgroundImage: 'url("../src/Components/Images/pic1.png")', backgroundColor:'#cccccc6b', zIndex:'999' },
+          '41%':{opacity:0.4, zIndex:'9'},
+          '43%, 80%': {opacity:1, backgroundImage: 'url("../src/Components/Images/creatorBg2.png")', zIndex:'999'},
+          '81%':{opacity:0.4, zIndex:'9'},
+          '83%, 100%': {opacity:1, backgroundImage: 'url("../src/Components/Images/creatorBg3.png")', zIndex:'999'},
         },
       },
     },

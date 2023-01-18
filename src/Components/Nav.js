@@ -6,8 +6,8 @@ import {FiBell} from 'react-icons/fi';
 const nav = ({cart}) => {
 
   return (
-    <nav className='w-full flex-center z-[9999] pointer-events-auto'>
-        <NavLink to='/'><h3 className="logo text-32 uppercase font-medium cursor-pointer">Artsy.</h3></NavLink>
+    <nav className='w-full flex-center z-[9999] pointer-events-auto font-[satoshi]'>
+        <NavLink to='/'><h3 className="logo text-32 uppercase font-bold tracking-wider cursor-pointer nav-logo">Artsy.</h3></NavLink>
 
         <ul className='flex space-x-8 text-24 font-normal cursor-pointer'>
             <NavLink to='/'><li className=''>Home</li></NavLink>

@@ -44,7 +44,7 @@ const FtDescription = ({FtData, FilterData, cart, Atcart}) => {
         <div className="w-5/6 mx-auto">
             <Nav cart={cart}/>
             <div className="ftdescription-body mt-16 space-y-10 w-[95%] mx-auto">
-                <h4 className="text-24 cursor-pointer"><NavLink to='/'><span className='text-[#BCB7B7]'>Home/</span></NavLink>{`Marketplace/ Editorials/ ${selected.name}`}</h4>
+                <h4 className="text-24 cursor-pointer font-semibold tracking-wide"><NavLink to='/'><span className='text-[#BCB7B7]'>Home / Marketplace / Editorials / </span></NavLink>{`${selected.name}`}</h4>
                 
                 <div className='flex-center items-center justify-start border'>
                     <img src={selected.id >=10? selected.image:selected.bigImage} alt="" className={`py-8 px-4 h-[52.5em] w-full ${selected.id >=10? 'w-3/6':''}`}/>
@@ -61,7 +61,7 @@ const FtDescription = ({FtData, FilterData, cart, Atcart}) => {
                         <div className="desc-buy py-10 px-5 border-b space-y-3 ">
                             <h4 className='text-32 text-drop-text'>Creator : <span className='text-light-blue font-medium'>{selected.creator===undefined?'Ali Dawa':selected.creator}</span></h4>
                             <p className='text-24 text-black'>{selected.country===undefined?'Made In Italy':selected.country}</p>
-                            <h5 className='text-28 font-medium'>Total views: <span>{selected.views}</span></h5>
+                            <h5 className='text-28 font-semibold'>Total views: <span>{selected.views}</span></h5>
                             <div className="desc-amount text-36 flex space-x-3">
                                 <button onClick={()=>cartItems('minus')}>-</button>
                                 <p>{count}</p>
@@ -102,24 +102,24 @@ const FtDescription = ({FtData, FilterData, cart, Atcart}) => {
 
                 
                 <div className="ftdesc-explore-outer pt-10 space-y-16">
-                    <div className="rounded-xl explore-bar flex-center py-5 px-4">
-                        <p className=' text-32 font-medium w-full'>Explore more from this collection</p>
+                    <div className="rounded-xl explore-bar flex-center py-5 px-6">
+                        <p className=' text-28 font-semibold w-full'>Explore more from this collection</p>
                         <div className="flex-center justify-end space-x-5">
                             <button className='np-button !shadow-none border-[.5px] border-[#616161]'><i className="fas fa-chevron-left text-base"></i></button>
                             <button className='np-button !shadow-none border-[.5px] border-[#616161]'><i className="fas fa-chevron-right text-base"></i></button>
                         </div>
                     </div>
                     <div>
-                        <div className="explore-images flex-center justify-start gap-x-8 w-5/6 overflow-x-auto">
+                        <div className="explore-images flex-center justify-start gap-x-8 w-full overflow-x-auto">
 
                             {Explore.map((e,index)=>(
-                                <div className="flex-column  space-y-3 p-3 border border-[#333] !w-[30rem]" key={index}>
+                                <div className="flex-column space-y-3 p-3 px-5 border border-[#333] min-w-[30%]" key={index}>
                                     <AiOutlineHeart className="ft-desc-explore-font"/>
-                                    <img src={e.image} alt="" className=' h-72 !w-80'/>
+                                    <img src={e.image} alt="" className=' h-72 w-full'/>
                                     <div className='text-32 font-medium flex-center'>
-                                        <h3 >{e.name}</h3>
-                                        <div>
-                                            <img src="" alt="" />
+                                        <h3 className='font-semibold'>{e.name}</h3>
+                                        <div className='flex-center justify-end space-x-1'>
+                                            <i className="fa-brands fa-ethereum text-main-text text-2xl"></i>
                                             <h4>{e.price}</h4>
                                         </div>
                                     </div>
@@ -129,7 +129,7 @@ const FtDescription = ({FtData, FilterData, cart, Atcart}) => {
                         </div>
 
                     </div>
-                    <button className='see-more bg-gradient-to-r from-[#78A3AD] to-[#C056097D] p-0 border-none'><span className=' bg-body-bg w-[99%] py-[0.55rem] rounded-md'>Explore All</span></button>
+                    <button className='see-more bg-gradient-to-r from-[#78A3AD] to-[#C056097D] p-0 border-none'><span className='bg-body-bg w-[99%] py-[0.55rem] rounded-md'>Explore All</span></button>
                 </div>
             </div>
         </div>

@@ -2,12 +2,15 @@ import React from 'react'
 import Icon1 from '../Images/empty1.png'
 import Icon2 from '../Images/empty2.png'
 import Icon3 from '../Images/empty.png'
+import { useParams } from 'react-router-dom'
 
-const CartIsEmpty = ({navigate}) => {
+const CartIsEmpty = ({navigate, cart}) => {
+    const {name} = useParams();
+
   return (
     <div className='absolute h-screen w-screen -top-16 left-0 z-[99] !overflow-hidden '>
         <div className="circles relative pointer-events-none">
-            <img src={Icon1} alt="" className=''/>
+            <img src={Icon1 } alt="" className=''/>
             <img src={Icon2} alt="" className='absolute top-0'/>
         </div>
         <div className="section w-full  relative -top-[30vw] left-10">

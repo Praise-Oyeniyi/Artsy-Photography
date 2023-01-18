@@ -33,7 +33,7 @@ const AuctionLive = ({useNavigate}) => {
     <div className='w-full space-y-10 bg-body-bg overflow-x-hidden pb-10 text-header-p font-normal h-full'>
         <div className="w-5/6 mx-auto">
             <div className="ftdescription-body mt-16 space-y-10">
-                <h4 className="text-24 cursor-pointer font-semibold"><span className='text-[#BCB7B7]'><NavLink to='/'>Home/</NavLink><NavLink to='/AuctionsPage'>Auctions/</NavLink></span> Live bid</h4>
+                <h4 className="text-24 cursor-pointer font-semibold"><span className='text-[#BCB7B7]'><NavLink to='/'>Home / </NavLink><NavLink to='/AuctionsPage'>Auctions / </NavLink></span> Live bid</h4>
                 
                 <div className="main-auctions-outer border h-[95vh] flex">
 

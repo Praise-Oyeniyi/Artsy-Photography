@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer components {
+  body{
+    @apply font-[satoshi];
+  }
   .flex-center{
     @apply flex justify-between items-center w-full;
   }
@@ -10,7 +13,7 @@
     @apply flex flex-col;
   }
   .see-more{
-    @apply h-12 text-24 p-4 border-black border rounded-md w-[18%] mx-auto flex-center justify-center my-10 m-headings;
+    @apply h-12 text-24 p-4 border-black border rounded-md w-[18%] mx-auto flex-center justify-center my-10 m-headings font-semibold;
   }
   .np-button{
     @apply bg-np-button-bg h-10 w-10 rounded-full ;
@@ -174,5 +177,13 @@
   }
   .form-control-inner{
     @apply flex-center justify-start space-x-2;
+  }
+
+  /* Cart Page */
+  .payment-active{
+    @apply border-b text-[#292929] font-semibold;
+  }
+  .cart-total-span{
+    @apply text-[#292929] font-semibold tracking-wider;
   }
 }

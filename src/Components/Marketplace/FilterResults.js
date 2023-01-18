@@ -6,10 +6,10 @@ const FilterResults = ({filterAll}) => {
 
   return (
     <div className="w-[80%] filter-results pt-4">
-        <div className="w-full filter-results-container flex gap-10 items-center justify-evenly flex-wrap ">
+        <div className={`w-full filter-results-container flex gap-10 items-center justify-evenly flex-wrap ${filterAll.length <= 2?'!justify-start': ''}`}>
         {
             filterAll.map(e=>(
-            <div className='filter-items' key={e.id} onClick={()=>navigate(`/market/${e.id}`)}>
+            <div className={`filter-items `} key={e.id} onClick={()=>navigate(`/market/${e.id}`)}>
                 <img src={e.image} alt='filtered-show' className='filter-image'/>
                 <p className='text-22 uppercase'>{e.name}</p>
                 <h4 className='text-28 font-bold'>{'$'+e.price}</h4>

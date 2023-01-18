@@ -18,7 +18,7 @@ const DropSection = ({DropData}) => {
 
                 <div className="notification-box-right">
                     <button 
-                        className={`text-18  px-8 py-1 rounded-lg text-body-bg ${e.when==='Ended'?'bg-grey':e.when=== 'Upcoming'?'bg-green':'bg-blue'}`}>
+                        className={`text-18  px-8 py-2 rounded-lg text-body-bg ${e.when==='Ended'?'bg-grey':e.when=== 'Upcoming'?'bg-green':'bg-blue'}`}>
                             {e.when}
                     </button>
 

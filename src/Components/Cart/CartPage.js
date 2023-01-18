@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import CartIsEmpty from './CartIsEmpty';
 import CartNotEmpty from './CartNotEmpty';
 
-const CartPage = ({cart, Nav, deleteItem}) => {
+const CartPage = ({cart, Nav, deleteItem, cartItemsAdd, cartItemsRemove}) => {
     const navigate = useNavigate();
     const [Half, Halved] = useState('shopping');
 
@@ -14,7 +14,7 @@ const CartPage = ({cart, Nav, deleteItem}) => {
             {cart.length===0?
             <CartIsEmpty navigate={navigate}/>
             :
-            <CartNotEmpty cart={cart} navigate={navigate} deleteItem={deleteItem} Half={Half} Halved={Halved}/>
+            <CartNotEmpty cart={cart} navigate={navigate} deleteItem={deleteItem} Half={Half} Halved={Halved} cartItemsAdd={cartItemsAdd} cartItemsRemove={cartItemsRemove}/>
             }
         </div>
     </div>

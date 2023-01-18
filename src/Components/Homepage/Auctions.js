@@ -20,13 +20,13 @@ const Auctions = ({next, useNavigate}) => {
                     <div className='flex flex-col space-y-4'>
 
                         <div className="top w-[25%] flex items-end">
-                            <h3 className='text-28 leading-tight'>MONALISA REDEFINED IN STYLE.</h3>
+                            <h3 className='text-28 leading-tight font-[Bellefair]'>MONALISA REDEFINED IN STYLE.</h3>
                         </div>
 
 
                         <div className="w-full bottom flex justify-between items-end">
                             <div className="left space-y-4 w-4/6">
-                                <h5 className='text-xs uppercase'>Start on : 08:00 GTS . Monday </h5>
+                                <h5 className='text-xs uppercase font-[poppins]'>Start on : 08:00 GTS . Monday </h5>
                                 <p className=' leading-tight text-15'>
                                     GET EXCLUSIVE VIEWING OF CONTEMPORARY ART AND CONNECT WITH INVESTORS 
                                     AND AUCTIONEERS ACROSS THE WORLD BRINGING THEIR HIGHEST AND LOWEST BIDS.
@@ -52,16 +52,16 @@ const Auctions = ({next, useNavigate}) => {
 
         </div>
 
-        <div className="explore-outer w-full pt-20 pb-24">
-            <div className="explore w-full mx-auto ">
-            <div className='w-full flex justify-between border-y px-[8.5%] py-8'>
-                <h3 className='text-48' >Explore Marketplace</h3>
-                <img src={exploreBtn} alt="" className='explore-btn' onClick={()=>navigate('Marketplace')}/>
-            </div>
-            <div className='w-full flex justify-between border-b px-[8.5%] py-8'>
-                <h3 className='text-48'>See Auctions</h3>
-                <img src={exploreBtn} alt="" className='explore-btn' onClick={()=>navigate('Auctionspage')}/>
-            </div>
+        <div className="explore-outer w-full pt-28 pb-24">
+            <div className="explore w-full mx-auto font-medium">
+                <div className='w-full flex justify-between border-y px-[8.5%] py-8'>
+                    <h3 className='text-48' >Explore Marketplace</h3>
+                    <img src={exploreBtn} alt="" className='explore-btn' onClick={()=>navigate('Marketplace')}/>
+                </div>
+                <div className='w-full flex justify-between border-b px-[8.5%] py-8'>
+                    <h3 className='text-48'>See Auctions</h3>
+                    <img src={exploreBtn} alt="" className='explore-btn' onClick={()=>navigate('Auctionspage')}/>
+                </div>
             </div>
 
         </div>
