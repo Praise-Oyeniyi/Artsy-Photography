@@ -81,21 +81,18 @@ const FtDescription = ({FtData, FilterData, cart, Atcart}) => {
                                 <h4 className='text-32 font-medium'>Description</h4>
                                 <i className="fas fa-chevron-down text-base"></i>
                             </div>
-                            <i className="fa-solid fa-chevron-down text-lg"></i>
                         </div>
                         <div className='desc-accordion-outer px-5 py-10 border-b sm:py-5 sm:px-0'>
                             <div className="desc-accordion-title">
                                 <h4 className='text-32 font-medium'>Listings</h4>
                                 <i className="fas fa-chevron-down text-base"></i>
                             </div>
-                            <i className="fa-solid fa-chevron-down text-lg"></i>
                         </div>
                         <div className='desc-accordion-outer px-5 py-10 sm:py-5 sm:border-b sm:px-0'>
                             <div className="desc-accordion-title">
                                 <h4 className='text-32 font-medium'>Status</h4>
                                 <i className="fas fa-chevron-down text-base"></i>
                             </div>
-                            <i className="fa-solid fa-chevron-down text-lg"></i>
                         </div>
                     </div>
                 </div>
