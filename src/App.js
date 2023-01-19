@@ -67,7 +67,6 @@ function App() {
 
   const cartItemsAdd = (id) =>{
     cart.map(x=> x.id === id? x.amount++ : x)
-    console.log(cart)
     updateCart([...cart])
   }
   const cartItemsRemove = (id) =>{

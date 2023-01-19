@@ -18,14 +18,17 @@
   .np-button{
     @apply bg-np-button-bg h-10 w-10 rounded-full ;
   }
+  .hover-btn{
+    @apply hover:bg-dark-blue delay-75 ease-out duration-500 transition-all;
+  }
   .text-32{
-    @apply text-3xl;
+    @apply text-3xl sm:text-base;
   }
   .text-36{
     @apply text-4xl font-bold text-black ;
   }
   .text-24{
-    @apply text-xl font-normal;
+    @apply text-xl font-normal sm:text-sm;
   }
   .text-80{
     @apply text-7xl font-bold ;
@@ -37,7 +40,7 @@
     @apply text-[1.3rem] font-normal;
   }
   .text-48{
-    @apply text-5xl font-normal;
+    @apply text-5xl font-normal sm:text-2xl;
   }
   .text-40{
     @apply text-[2rem] font-medium;
@@ -46,7 +49,7 @@
     @apply text-base;
   }
   .text-55{
-    @apply text-[3.5rem] font-bold;
+    @apply text-[3.5rem] font-bold sm:text-3xl;
   }
   .featured-avatar{
     @apply absolute top-0 h-full w-auto;
@@ -73,6 +76,9 @@
     @apply text-white text-28;
   }
 
+  .exhibition-header{
+    @apply pb-5 border-b text-40  text-auctions-text;
+  }
 
   /* Featured detailed*/
   .ft-desc-explore-font{
@@ -82,6 +88,26 @@
     @apply flex-center;
   }
 
+  .explore-div{
+    @apply w-full flex justify-between border-y-[.5px] border-grey  px-[8.5%] py-8 sm:px-5 sm:py-5;
+  }
+  .explore-btn{
+    @apply  mr-[8.5%] h-12 sm:mr-0 sm:h-10;
+  }
+
+  .creator-filter{
+    @apply text-40 font-normal flex-column space-y-8 border-l-4 border-grey pt-2 pl-5 z-10 sm:text-xs sm:!flex-row sm:border-none sm:items-start sm:justify-start;
+  }
+
+
+  .newsletter {
+    @apply absolute  mx-auto border border-grey text-center space-y-3 py-10 sm:text-left sm:border-none;
+  }
+
+
+
+
+
 
 
 /* MarketPlace */
@@ -89,7 +115,7 @@
     @apply  w-full relative top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] p-1;
   }
   .c-filter-container{
-    @apply flex-center justify-start space-x-2;
+    @apply flex-center justify-start space-x-2 ;
   }
   .c-filter-checked{
     @apply w-6 bg-box-bg h-6 rounded-md relative;
@@ -98,7 +124,7 @@
     @apply font-medium;
   }
   .filter-items{
-    @apply w-[25%] p-4 bg-white rounded-md space-y-2;
+    @apply w-[25%] p-4 bg-white rounded-md space-y-2 sm:w-full !shadow-none !bg-none sm:p-0;
   }
   .filter-image{
     @apply bg-black h-full object-cover w-full rounded-md ;
@@ -127,9 +153,7 @@
   .creator-button{
     @apply bg-blue h-14 w-3/6 text-white text-26 px-4;
   }
-  .explore-btn{
-    @apply  mr-[8.5%] h-12;
-  }
+  
   .featured-border{
     @apply border-b-main-text border-b pb-10;
   }

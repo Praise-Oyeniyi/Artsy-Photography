@@ -61,7 +61,7 @@ const Index = ({Nav,NavLink, useNavigate, AuctionsData, cart}) => {
                     <h5 className='text-auc-creator-text'>Current bid</h5>
                     <h4 className='text-main-text'>0.987 ETH</h4>
                   </div>
-                  <button className='creator-button'>Place Bid</button>
+                  <button className='creator-button hover-btn'>Place Bid</button>
                 </div>
               </div>
 
@@ -82,7 +82,7 @@ const Index = ({Nav,NavLink, useNavigate, AuctionsData, cart}) => {
                     <h5 className='text-auc-creator-text'>Current bid</h5>
                     <h4 className='text-main-text'>0.99 ETH</h4>
                   </div>
-                  <button className='creator-button'>Place Bid</button>
+                  <button className='creator-button hover-btn'>Place Bid</button>
                 </div>
               </div>
 

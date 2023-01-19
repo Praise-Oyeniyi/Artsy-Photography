@@ -16,7 +16,7 @@ const FilterOptions = ({filterControl}) => {
 
 
   return (
-    <div className="filter-options w-1/6 space-y-10">
+    <div className="filter-options w-1/6 space-y-10 sm:hidden">
         <div className='flex-center justify-start pb-3 mb-5 border-b-2 space-x-2'>
             <img src={Filter} alt="" className='h-9 w-9'/>
             <h3 className='text-32 m-headings text-[rgba(0, 0, 0, 1)] '>Filter</h3>

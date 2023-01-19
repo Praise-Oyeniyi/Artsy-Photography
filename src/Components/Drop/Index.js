@@ -17,7 +17,7 @@ const Index = ({Nav,NavLink, useNavigate, cart}) => {
                         Upcoming drops
                     </h3>
                     <p className="text-32 font-normal text-drop-text">Turn on notifications so that no drops will miss you.</p>
-                    <button className="text-28 font-semibold w-[25%] border py-2 rounded-md">Notify Me</button>
+                    <button className="text-28 font-semibold w-[25%] border py-3 rounded-md hover:bg-blue transition-all delay-75 duration-300 ease-linear hover:text-white">Notify Me</button>
                 </main>
 
                 <section className="notifications-outer pt-10">

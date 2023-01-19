@@ -15,6 +15,19 @@ module.exports = {
         },
       },
     },
+    screens: {
+      'sm': {'max': '519px'},
+      // => @media (max-width: 500px) { ... }
+
+      'tab': {'min': '520px', 'max': '699px'},
+      // => @media (max-width: 700px) { ... }
+
+      'med': {'min': '700px', 'max': '900px'},
+      // => @media (min-width: 700px) { ... }
+
+      'lg': '901px',
+      // => @media (min-width: 1021px) { ... }
+    },
     colors:{
       'white':'#fff',
       'black':'#000',
@@ -25,6 +38,7 @@ module.exports = {
       'grey-100':'rgba(184, 186, 188, 1)',
       'light-blue':'rgba(70, 147, 237, 1)',
       'blue':'rgba(51, 65, 193, 1)',
+      'dark-blue': '#051076',
       'np-button-bg':'rgba(255, 255, 255, 0.2)',
       'body-bg': 'rgba(255, 255, 255, 1)',
       'header-p':'rgba(41, 41, 41, 1)',
