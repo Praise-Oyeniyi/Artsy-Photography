@@ -9,8 +9,8 @@ const Footer = ({useNavigate}) => {
 
   return (
     <div>
-      <div className="newsletter-outer w-full py-14 relative">
-        <div className="newsletter w-[92%] left-[4%]">
+      <div className="newsletter-outer w-full py-14 relative sm:pt-3">
+        <div className="newsletter w-[92%] left-[4%] sm:left-[6%]">
           <h3 className='text-3xl font-[Baskervville] sm:text-2xl'>
             NEWSLETTER
           </h3>
@@ -18,7 +18,7 @@ const Footer = ({useNavigate}) => {
 
           <form action="" method="post" className='w-[40%] sm:w-full mx-auto sm:mx-0 sm:items-start  flex items-center sm:flex-col sm:space-y-5 sm:space-x-0  space-x-3 py-3 font-[Baskervville]'>
             <input type="email" name="" id="" placeholder='Enter your Email' className='w-[70%] border border-gray-800 h-12 pl-3 outline-none sm:w-5/6 ' required/>
-            <button type="submit" className='bg-black h-12 w-auto text-white px-5 border-[#333333] text-15 sm:h-14'>SUBSCRIBE</button>
+            <button type="submit" className='bg-black h-12 w-auto text-white px-5 border-[#333333] text-15'>SUBSCRIBE</button>
           </form>
 
         </div>
@@ -47,8 +47,8 @@ const Footer = ({useNavigate}) => {
         <div className='lg:hidden flex-column relative left-[4%] pt-7 space-y-4'>
           <h4 className='uppercase font-normal text-lg '>Reach Us</h4>
           <ul className='space-y-3 text-26 self-start  '>
-            <li className='flex items-center sm:text-xs'><AiOutlineMail className=" text-4xl text-black mr-3 sm:text-2xl"/>artsystudios@gmail.com</li>
-            <li className='flex items-center sm:text-xs'><FiMapPin className="fas fa-location-dot text-4xl text-black mr-4 sm:text-2xl"/>Lagos, Nigeria.</li>
+            <li className='flex items-center sm:text-sm'><AiOutlineMail className=" text-4xl text-black mr-3 sm:text-2xl"/>artsystudios@gmail.com</li>
+            <li className='flex items-center sm:text-sm'><FiMapPin className="fas fa-location-dot text-4xl text-black mr-4 sm:text-2xl"/>Lagos, Nigeria.</li>
           </ul>
         </div>
         

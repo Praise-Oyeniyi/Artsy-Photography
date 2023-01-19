@@ -18,11 +18,11 @@ const Featured = ({next, useNavigate, FtData}) => {
           </h3>
 
 
-          <div className="featured-product-outer space-y-10">
+          <div className="featured-product-outer space-y-10 sm:space-y-5">
             {FtData.map((e)=>(
               <div className={`featured-product w-full flex sm:flex-col sm:space-x-0 sm:space-y-5 space-x-10 featured-border ${e.id===3?'!border-b-0':''}`} key={e.id}>
                 <div className={`featured-product-img w-full  ${e.id%2===0? 'order-2 ml-10 sm:order-1 sm:ml-0':''}`} onClick={()=>navigate(`/market/${e.id}`)}>
-                  <img src={e.image} alt="" className='w-full' />
+                  <img src={e.image} alt="" className='w-full sm:h-[15em]' />
                   
                   <div className='featured-pd-effect'>
                     <p className='featured-pd-effect-text ' onClick={()=>navigate(`/market/${e.id}`)}>View Product</p>

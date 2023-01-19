@@ -64,7 +64,7 @@
 
 /* Homepage */
   .featured-border{
-    @apply border-b-main-text border-b pb-10;
+    @apply border-b-main-text border-b pb-10 sm:!pb-5;
   }
   .featured-product-img{
     @apply w-full relative hover:scale-x-[1.01] border-x-4 border-x-[transparent]  transition-all ease-out duration-[.5s];
