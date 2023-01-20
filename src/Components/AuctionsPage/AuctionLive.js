@@ -30,26 +30,27 @@ const AuctionLive = ({useNavigate}) => {
 
     
   return (
-    <div className='w-full space-y-10 bg-body-bg overflow-x-hidden pb-10 text-header-p font-normal h-full'>
-        <div className="w-5/6 mx-auto">
+    <div className='w-full space-y-10 bg-body-bg overflow-x-hidden pb-10 text-header-p font-normal h-full  sm:relative' >
+        <div className="w-5/6 mx-auto ">
             <div className="ftdescription-body mt-16 space-y-10">
                 <h4 className="text-24 cursor-pointer font-semibold"><span className='text-[#BCB7B7]'><NavLink to='/'>Home / </NavLink><NavLink to='/AuctionsPage'>Auctions / </NavLink></span> Live bid</h4>
                 
-                <div className="main-auctions-outer border h-[95vh] flex">
+                <div className="main-auctions-outer border h-[95vh] flex sm:flex-column sm:w-full">
 
-                    <div className="main-auction-left w-3/6 h-full text-white flex-column justify-between py-3 px-6 relative">
-                        <div className='flex-center'>
-                            <button  onClick={()=>navigate('/AuctionsPage')}><i className="fa fa-xmark bg-[#b8b4b47d] rounded-full px-3 py-1 text-2xl"></i></button>
-                            <button className='bg-light-blue rounded-xl py-0 px-3 text-15'>Live</button>
+                    <div className="main-auction-left w-3/6 h-full text-white flex-column justify-between py-3 px-6 relative sm:fixed sm:min-w-full sm:h-screen sm:top-0 sm:left-0 sm:justify-start sm:items-center sm:space-y-56">
+                        <div className='flex-center '>
+                            <h4 className='pb-10 text-24 lg:hidden sm:pb-0'>Tag: Lost or Wither</h4>
+                            <button  onClick={()=>navigate('/AuctionsPage')}><i className="fa fa-xmark bg-[#b8b4b47d] sm:order-3 rounded-full px-3 py-1 text-2xl"></i></button>
+                            <button className='bg-light-blue rounded-xl py-0 px-3 text-15 sm:order-2'>Live</button>
                         </div>
                         <h3 className='text-48 place-self-center font-semibold'>
                             {`Current bid $4500`}
                         </h3>
-                        <h4 className='pb-10 text-24'>Tag: Lost or Wither</h4>
+                        <h4 className='pb-10 text-24 sm:hidden'>Tag: Lost or Wither</h4>
                     </div>
 
 
-                    <div className="main-auction-right px-6 w-3/6">
+                    <div className="main-auction-right px-6 w-3/6 sm:w-full sm:px-0">
                         <BidSection bidFunction={bidFunction} addBid={addBid} setBid={setBid} bidss={bidss} bid={bid}/>
 
                     </div>

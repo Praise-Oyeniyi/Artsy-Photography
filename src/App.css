@@ -38,6 +38,9 @@
 .images-slider{
     background: url('./Components/Images/auctions-bg.png');
 }
+.dots-span{
+    @apply bg-grey rounded-full h-2 w-2 sm:h-1 sm:w-1;
+}
 .featured-product-img:hover .featured-pd-effect{
     opacity: 1;
     transition: all .3s ease-out;

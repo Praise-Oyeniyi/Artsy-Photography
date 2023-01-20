@@ -12,10 +12,10 @@ const Auctions = ({next, useNavigate}) => {
                     See Upcoming Auctions And Exhibitions.
                 </h3>
 
-                <div className="images-slider w-full my-4 h-[28rem] text-white flex items-end px-6 py-14 space-x-3 sm:px-1 sm:py-0 sm:items-center">
-                    <div className='self-center h-[20%] flex-column sm:h-[50%]'>                       
-                        <h1 className='text-8xl self-end -mt-3'>.</h1>
-                        <h2 className="number text-6xl pt-8 sm:text-4xl">01</h2>
+                <div className="images-slider w-full my-4 h-[28rem] sm:h-[20rem] text-white flex items-end px-6 py-14 space-x-3 sm:px-1 sm:py-0 sm:items-center">
+                    <div className='self-center h-[20%] flex-column sm:h-[100%]'>                       
+                        <h1 className='text-8xl self-end -mt-3 sm:self-start'>.</h1>
+                        <h2 className="number text-6xl pt-8 sm:pt-5 sm:text-4xl">01</h2>
                     </div>
                     <div className='flex flex-col space-y-4'>
 
@@ -27,12 +27,12 @@ const Auctions = ({next, useNavigate}) => {
                         <div className="w-full bottom flex justify-between items-end sm:space-y-5 sm:flex-col sm:items-start">
                             <div className="left space-y-4 w-4/6 sm:w-full"> 
                                 <h5 className='text-xs uppercase font-[poppins] sm:text-sm'>Start on : 08:00 GTS . Monday </h5>
-                                <p className=' leading-tight text-15 sm:text-xs'>
+                                <p className=' leading-tight text-15 sm:text-xs sm:leading-normal'>
                                     GET EXCLUSIVE VIEWING OF CONTEMPORARY ART AND CONNECT WITH INVESTORS 
                                     AND AUCTIONEERS ACROSS THE WORLD BRINGING THEIR HIGHEST AND LOWEST BIDS.
                                 </p>
                             </div>
-                            <div className="right w-auto space-x-5 text-24 sm:w-5/6 sm:flex-center sm:place-self-end sm:pr-3">
+                            <div className="right w-auto space-x-5 text-24 sm:w-5/6 sm:flex-center sm:justify-start sm:place-self-end">
                                 <p className='inline border-b pb-1 cursor-pointer' onClick={()=>navigate('auctionspage')}>See more</p>
                                 <button className='border-white border rounded-md px-2 py-[.3rem]' onClick={()=>navigate('drop')}>Set a reminder</button>
                             </div>

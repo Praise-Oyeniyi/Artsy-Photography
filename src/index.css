@@ -63,6 +63,15 @@
 
 
 /* Homepage */
+  .logo{
+    @apply text-32 uppercase font-bold tracking-wider cursor-pointer sm:text-2xl;
+    }
+    .mobile-nav{
+      @apply  fixed top-0  w-full h-screen bg-body-bg flex-column text-black p-6 space-y-10 lg:hidden;
+    }
+
+
+
   .featured-border{
     @apply border-b-main-text border-b pb-10 sm:!pb-5;
   }
@@ -70,7 +79,7 @@
     @apply w-full relative hover:scale-x-[1.01] border-x-4 border-x-[transparent]  transition-all ease-out duration-[.5s];
   }
   .featured-pd-effect{
-    @apply w-full h-full absolute top-0 left-0 bg-black bg-opacity-70 flex-center justify-center space-x-5 opacity-0;
+    @apply w-full h-full absolute top-0 left-0 bg-black bg-opacity-70 flex-center justify-center space-x-5 opacity-0 sm:opacity-100 sm:space-x-0;
   }
   .featured-pd-effect-text{
     @apply text-white text-28;
@@ -133,25 +142,31 @@
 
   /* AuctionsPage */
   .auctions-img-text{
-    @apply w-4/6 mx-auto text-body-bg text-40 py-2 px-4 absolute bottom-10 text-center left-[50%] -translate-x-[50%] bg-auc-text-bg rounded-md border-[.5px] border-body-bg;
+    @apply w-4/6 sm:w-5/6 sm:text-15 sm:bottom-5 mx-auto text-body-bg text-40 py-2 px-4 absolute bottom-10 text-center left-[50%] -translate-x-[50%] bg-auc-text-bg rounded-md border-[.5px] border-body-bg;
+  }
+  .creator-container{
+    @apply space-y-8 w-3/6 sm:w-full sm:space-y-5;
   }
   .creator-container-inner{
     @apply rounded-lg flex flex-col;
   }
   .heart-icon{
-    @apply h-12 w-12 border rounded-full p-3 my-3 self-end mx-4;
+    @apply h-12 w-12 border rounded-full p-3 my-3 self-end mx-4 sm:p-2 sm:h-8 sm:w-8 sm:my-2;
   }
   .creator-info{
-    @apply text-auc-creator-text text-32 space-y-7;
+    @apply text-auc-creator-text text-32 space-y-7 sm:text-xl sm:space-y-5;
   }
   .creator-info-text{
     @apply flex-center font-medium;
   }
   .creator-span{
-    @apply font-bold text-main-text w-4/6;
+    @apply font-bold text-main-text w-4/6 ;
+  }
+  .bid-left{
+    @apply text-28 font-bold space-y-3 sm:space-y-1;
   }
   .creator-button{
-    @apply bg-blue h-14 w-3/6 text-white text-26 px-4;
+    @apply bg-blue h-14 w-3/6 text-white text-26 px-4 sm:text-base sm:h-10;
   }
   
   .featured-border{

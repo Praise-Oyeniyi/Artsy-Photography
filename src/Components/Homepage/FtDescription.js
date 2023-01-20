@@ -41,20 +41,20 @@ const FtDescription = ({FtData, FilterData, cart, Atcart}) => {
 
   return (
     <div className='w-full ftdescription-outer space-y-10 bg-body-bg overflow-x-hidden py-10 text-header-p font-normal mb-56 sm:mb-10'>
-        <div className="w-5/6 mx-auto">
+        <div className="w-5/6 mx-auto sm:w-full">
             <Nav cart={cart}/>
             <div className="ftdescription-body mt-16 space-y-10 w-[95%] sm:w-full mx-auto">
-                <h4 className="text-24 cursor-pointer font-semibold tracking-wide sm:border-b sm:pb-2"><NavLink to='/'><span className='text-[#BCB7B7]'>Home / Marketplace / Editorials / </span></NavLink>{`${selected.name}`}</h4>
+                <h4 className="text-24 cursor-pointer font-semibold tracking-wide sm:border-b sm:pb-2 sm:mx-3"><NavLink to='/'><span className='text-[#BCB7B7]'>Home / Marketplace / Editorials / </span></NavLink>{`${selected.name}`}</h4>
                 
-                <div className='flex-center items-center justify-start border sm:border-none sm:flex-col'>
+                <div className='flex-center items-center justify-start border sm:border-none sm:flex-col sm:w-[90%] sm:mx-auto'>
                     <img src={selected.id >=10? selected.image:selected.bigImage} alt="" className={`py-8 px-4 h-[52.5em] sm:h-96 sm:p-0 w-full ${selected.id >=10? 'w-3/6 sm:w-full':''}`}/>
 
                     <div className="desc-text-area w-full border-l sm:border-none sm:!text-lg">
                         <div className="desc-title-area border-b py-10 px-5 flex-center sm:py-0  sm:border-none sm:px-0 sm:pt-3">
                             <h3 className='text-40 font-bold sm:text-lg sm:uppercase'>{selected.name}</h3>
                             <div className="desc-price flex items-center gap-x-3 text-4xl">
-                                <i className="fa-brands fa-ethereum text-main-text"></i>
-                                <h5 className='text-32 font-medium sm:font-bold'>${selected.price}</h5>
+                                <i className="fa-brands fa-ethereum text-main-text sm:hidden"></i>
+                                <h5 className='text-32 font-medium sm:font-bold'><span className='lg:hidden'>$ </span>{selected.price}</h5>
                             </div>
                         </div>
 
@@ -98,7 +98,7 @@ const FtDescription = ({FtData, FilterData, cart, Atcart}) => {
                 </div>
 
                 
-                <div className="ftdesc-explore-outer pt-10 space-y-16 sm:space-y-8">
+                <div className="ftdesc-explore-outer pt-10 space-y-16 sm:space-y-8 sm:w-[95%] sm:mx-auto">
                     <div className="rounded-xl explore-bar flex-center py-5 px-6 sm:!shadow-none sm:px-0 sm:py-0">
                         <p className=' text-28 font-semibold w-full sm:hidden'>Explore more from this collection</p>
                         <p className=' text-28 font-semibold w-full lg:hidden '>More from this collection</p>
