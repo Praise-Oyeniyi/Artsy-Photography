@@ -60,7 +60,7 @@ const Payment = ({CartTotal, itemTotal, cart}) => {
                         </div>
 
                         <div className='form-half flex-center gap-x-5 m:gap-x-0 sm:flex-column sm:space-y-4 sm:w-full'>
-                            <div className="form-control sm:w-full">
+                            <div className="form-control sm:min-w-full">
                                 <label htmlFor="date" className='label'>Expiry Date</label>
                                 <input type="date" id="date" className='form-input pr-5' required/>
                             </div>
