@@ -45,7 +45,7 @@ const CartNotEmpty = ({cart,deleteItem,navigate,Half, Halved,cartItemsAdd,cartIt
                                 <div className={`cart-item-left flex-center justify-start items-stretch ${Half === 'shipping'?'gap-x-7 sm:gap-3':'gap-x-10 sm:gap-x-3'}`}>
                                     <img src={e.image} alt="" className={`rounded-md ${Half === 'shipping'?'h-48 w-40 sm:h-36 sm:w-32':'h-48 w-48 sm:h-28 sm:w-28'}`}/>
                                     <div className="cart-details space-y-5 sm:h-28 sm:pb-2 sm:pt-1 sm:flex-column sm:justify-between">
-                                        <h3 className='text-24 font-semibold sm:text-[22px]'>{e.name}</h3>
+                                        <h3 className='text-24 font-semibold sm:text-lg'>{e.name}</h3>
                                         <p className='text-24 sm:hidden'>{e.creator}</p>
                                         <p className='text-15 font-normal sm:hidden'>Size: <span className='font-medium pl-3'>{e.size}</span></p>
                                         
