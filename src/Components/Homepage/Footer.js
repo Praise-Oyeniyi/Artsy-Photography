@@ -10,7 +10,7 @@ const Footer = ({useNavigate}) => {
   return (
     <div>
       <div className="newsletter-outer w-full py-14 relative sm:pt-0">
-        <div className="newsletter w-[92%] left-[4%] sm:left-[6%]">
+        <div className="newsletter w-[92%] left-[4%] sm:left-[2%]">
           <h3 className='text-3xl font-[Baskervville] sm:text-2xl'>
             NEWSLETTER
           </h3>
@@ -44,7 +44,7 @@ const Footer = ({useNavigate}) => {
             <li className='flex items-center'><FiMapPin className="fas fa-location-dot text-4xl text-black mr-4"/>Lagos, Nigeria.</li>
           </ul>
         </div>
-        <div className='lg:hidden flex-column relative left-[6%] py-7 space-y-4'>
+        <div className='lg:hidden flex-column relative left-[2%] py-7 space-y-4'>
           <h4 className='uppercase font-normal text-lg '>Reach Us</h4>
           <ul className='space-y-4 text-26 self-start  '>
             <li className='flex items-center sm:text-sm'><AiOutlineMail className=" text-4xl text-black mr-3 sm:text-2xl"/>artsystudios@gmail.com</li>

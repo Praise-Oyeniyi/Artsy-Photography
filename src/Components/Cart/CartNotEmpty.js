@@ -41,12 +41,12 @@ const CartNotEmpty = ({cart,deleteItem,navigate,Half, Halved,cartItemsAdd,cartIt
                     <div className={`carts duration-500 space-y-10  ${Half === 'shipping'?'!w-full h-[95vh] overflow-y-auto relative top-0':''||hidden()}`}>
                         {cart.map((e, index)=>(
                             <div className={`cart-item flex-center items-start border-b border-grey pb-10`} key={index}>
-                                <div className={`cart-item-left flex-center justify-start items-stretch ${Half === 'shipping'?'gap-x-7':'gap-x-10'}`}>
-                                    <img src={e.image} alt="" className={`rounded-md ${Half === 'shipping'?'h-48 w-40':'h-48 w-48'}`}/>
+                                <div className={`cart-item-left flex-center justify-start items-stretch ${Half === 'shipping'?'gap-x-7 sm:gap-3':'gap-x-10 sm:gap-x-5'}`}>
+                                    <img src={e.image} alt="" className={`rounded-md ${Half === 'shipping'?'h-48 w-40 sm:h-36 sm:w-32':'h-48 w-48 sm:h-36 sm:w-32'}`}/>
                                     <div className="cart-details space-y-5">
                                         <h3 className='text-24 font-semibold'>{e.name}</h3>
-                                        <p className='text-24'>{e.creator}</p>
-                                        <p className='text-15 font-normal'>Size: <span className='font-medium pl-3'>{e.size}</span></p>
+                                        <p className='text-24 sm:hidden'>{e.creator}</p>
+                                        <p className='text-15 font-normal sm:hidden'>Size: <span className='font-medium pl-3'>{e.size}</span></p>
                                         <div className="cart-amount flex-center w-3/6 text-24 font-semibold">
                                             <button onClick={()=>cartItemsRemove(e.id)}>-</button>
                                                 <p>{e.amount}</p>
