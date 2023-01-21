@@ -133,7 +133,7 @@
     @apply font-medium;
   }
   .filter-items{
-    @apply w-[25%] p-4 bg-white rounded-md space-y-2 sm:w-full !shadow-none !bg-none sm:p-0;
+    @apply w-[25%] p-4 bg-white rounded-md space-y-2 sm:w-full sm:!shadow-none !bg-none sm:p-0;
   }
   .filter-image{
     @apply bg-black h-full object-cover w-full rounded-md ;
@@ -212,7 +212,7 @@
     @apply text-24 font-normal;
   }
   .form-input{
-    @apply h-14 border border-[#747474] rounded-lg bg-[#F2F2F2] outline-none text-24 pl-8 accent-[#888888];
+    @apply h-14 sm:h-12 border border-[#747474] rounded-lg bg-[#F2F2F2] outline-none text-24 pl-8 accent-[#888888];
   }
   .form-control-inner{
     @apply flex-center justify-start space-x-2;

@@ -1,15 +1,17 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const DetailsForm = ({Half, Halved}) => {
+    const navigate = useNavigate();
 
     const onSubmit = () => {
         Halved('payment');
     }
 
   return (
-    <div className={`${Half === 'shipping'?'details-form w-3/6':'hidden'} relative`}>
+    <div className={`${Half === 'shipping'?'details-form w-3/6 sm:min-w-full':'hidden'} relative`}>
 
-        <form className='text-[#888888] space-y-8' onSubmit={e => e.preventDefault()} noValidate>
+        <form className='text-[#888888] space-y-8 sm:space-4' onSubmit={e => e.preventDefault()} noValidate>
 
             <div className="form-control">
                 <label htmlFor="email" className='label'>Your Email</label>
@@ -38,13 +40,13 @@ const DetailsForm = ({Half, Halved}) => {
                 <input type="text" id="city" className='form-input' name='city' required/>
             </div>
 
-            <div className='form-half flex-center gap-x-10'>
-                <div className="form-control">
+            <div className='form-half flex-center gap-x-10 sm:gap-x-0 sm:flex-column sm:space-y-4 sm:w-full'>
+                <div className="form-control sm:w-full">
                     <label htmlFor="country" className='label'>Country</label>
                     <input type="text" id="country" className='form-input' name='country' required/>
                 </div>
 
-                <div className="form-control">
+                <div className="form-control sm:w-full">
                     <label htmlFor="zip" className='label'>Postal code</label>
                     <input type="text" pattern="[0-9]*" id="zip" name='zip' placeholder="001001" className='form-input' required/>
                 </div>
@@ -55,9 +57,10 @@ const DetailsForm = ({Half, Halved}) => {
                 <input type="phone" id="phone" name='phone' placeholder="0812 3456 785" className='form-input' required/>
             </div>
 
-            <button onClick={onSubmit} className='px-16 h-20 bg-blue w-full rounded-lg text-28 text-white flex-center justify-center' type='submit'>
+            <button onClick={onSubmit} className='px-16 sm:rounded-sm sm:px-8 sm:mx-auto h-20 sm:h-12 bg-blue w-full rounded-lg text-24 sm:w-4/6 text-white flex-center justify-center' type='submit'>
                 Proceed to payment
             </button>
+            <p className='text-24 text-blue border-b border-blue font-medium cursor-pointer mx-auto w-fit lg:hidden !mt-3' onClick={()=>navigate('/MarketPlace')}>Go back to cart </p>
             
         </form>
     </div>
