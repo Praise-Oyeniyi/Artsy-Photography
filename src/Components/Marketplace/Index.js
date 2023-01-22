@@ -6,6 +6,7 @@ import FilterTop from './FilterTop';
 
 const Index = ({Nav, cart}) => {
   const [filterAll, filterSome] = useState(FilterData);
+  const [active, setActive] = useState(false);
   const [prev, UpadatedPrev] = useState('')
 
   const filterControl = (value) =>{
@@ -28,14 +29,14 @@ const Index = ({Nav, cart}) => {
 
   return (
     <div className='w-full market-outer space-y-10 bg-body-bg overflow-x-hidden py-10 text-header-p font-normal'>
-      <div className="market-inner w-5/6 mx-auto">
+      <div className="market-inner w-5/6 mx-auto sm:w-full">
         <Nav cart={cart}/>
 
-        <div className='body w-full'>
-          <FilterTop filterAll={filterAll} searched={searched}/>
+        <div className='body w-full sm:w-[90%] sm:mx-auto'>
+          <FilterTop filterAll={filterAll} searched={searched} active={active} setActive={setActive}/>
           
-          <div className="filter w-full flex justify-between items-start">
-            <FilterOptions filterControl={filterControl}/>
+          <div className="filter w-full flex justify-between items-start sm:flex-column">
+            <FilterOptions filterControl={filterControl} active={active} setActive={setActive}/>
             <FilterResults filterAll={filterAll}/>
           </div>
         </div>

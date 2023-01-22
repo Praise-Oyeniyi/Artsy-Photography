@@ -4,10 +4,16 @@ import img1 from '../Icons/MetaMask.png';
 import img2 from '../Icons/Coinbase.png';
 import img3 from '../Icons/Phantom.png';
 import img4 from '../Icons/Wallet.png';
+import { useNavigate } from 'react-router-dom';
 
 const Payment = ({CartTotal, itemTotal, cart}) => {
+    const navigate = useNavigate();
+
+
   return (
     <div className="payment-outer flex-column text-[#616161] space-y-10 sm:space-y-5">
+        <h4 onClick={()=>navigate('/')} className="text-base font-semibold text-[#BCB7B7] lg:hidden pb-4">Home / Marketplace / Cart / Shipping / <span className='text-black font-semibold'>Payment</span></h4>
+         
         <div className="payment-top flex-center sm:justify-start">
             <h4 className='text-28 text-[#292929] font-semibold sm:hidden'>Payment method</h4>
             <p className='text-[#747474] font-normal text-24 flex items-center' >
