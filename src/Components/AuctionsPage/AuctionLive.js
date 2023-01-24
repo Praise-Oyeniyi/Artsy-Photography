@@ -40,13 +40,13 @@ const AuctionLive = ({useNavigate}) => {
 
                     <div className="main-auction-left w-3/6 h-full text-white flex-column justify-between py-3 px-6 relative sm:fixed sm:min-w-full sm:h-screen sm:top-0 sm:-right-1 sm:justify-start sm:items-center sm:space-y-56">
                         <div className='!flex-center '>
-                            <h4 className='pb-10 text-24 lg:hidden sm:pb-0'>Tag: Lost or Wither</h4>
+                            <h4 className='pb-10 text-24 lg:hidden med:hidden sm:pb-0'>Tag: Lost or Wither</h4>
                             <button  onClick={()=>navigate('/AuctionsPage')} className="flex"><i className="fa fa-xmark bg-[#b8b4b47d] rounded-full px-3 py-1 text-2xl sm:hidden"></i></button>
-                            <div className='sm:space-x-2  sm:flex'>
+                            <div className='sm:space-x-2  sm:flex lg:hidden med:hidden'>
                                 <button className='bg-light-blue rounded-xl py-0 px-3 text-15 sm:text-xs sm:rounded-sm sm:py-1'>Live</button>
                                 <button className='bg-[#ffffff66] px-3 text-xs rounded-sm py-1 lg-hidden flex-center'><HiEye className='mr-2'/>295</button>
                             </div>
-                            <button  onClick={()=>navigate('/AuctionsPage')}><i className="fa fa-xmark  text-base lg:hidden"></i></button>
+                            <button  onClick={()=>navigate('/AuctionsPage')}><i className="fa fa-xmark  text-base lg:hidden med:hidden"></i></button>
                         </div>
                         <h3 className='text-48 place-self-center font-semibold'>
                             {`Current bid $4500`}
@@ -61,7 +61,7 @@ const AuctionLive = ({useNavigate}) => {
                     </div>
                 </div>
             </div>
-            <button className='text-36 pt-10 font-semibold flex-center justify-start lg:hidden'>See upcoming drops <span onClick={()=>navigate('/Drop')}><FiArrowRightCircle className="ml-5 text-5xl mt-2 hover:text-grey"/></span></button>
+            <button className='text-36 pt-10 font-semibold flex-center justify-start lg:hidden med:hidden'>See upcoming drops <span onClick={()=>navigate('/Drop')}><FiArrowRightCircle className="ml-5 text-5xl mt-2 hover:text-grey"/></span></button>
         </div>
     </div>
   )

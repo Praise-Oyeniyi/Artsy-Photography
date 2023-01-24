@@ -16,14 +16,14 @@ const FilterOptions = ({filterControl, active, setActive}) => {
 
 
   return (
-    <div className={`filter-options w-1/6 space-y-10 sm:w-full  ${active?'opacity-100 block':'hidden'}`}>
+    <div className={`filter-options w-1/6 space-y-10 sm:w-full  ${active?'opacity-100 block':'sm:hidden'}`}>
         <div className='flex-center justify-start pb-3 mb-5 border-b-2 space-x-2 sm:hidden'>
             <img src={Filter} alt="" className='h-9 w-9'/>
-            <h3 className='text-32 m-headings text-[rgba(0, 0, 0, 1)] '>Filter</h3>
+            <h3 className='text-32 text-[rgba(0, 0, 0, 1)] filter-head !font-extrabold'>Filter</h3>
         </div>
 
         <div className='space-y-8 sm:space-y-4' >
-            <button className='text-28 m-headings text-[rgba(0, 0, 0, 1)] flex-center sm:text-lg' onClick={()=>setActive1(!active1)}>
+            <button className='filter-head text-[rgba(0, 0, 0, 1)]' onClick={()=>setActive1(!active1)}>
                 By Category 
                 <span className='pt-1'>{active1?down:up}</span>
             </button>
@@ -40,7 +40,7 @@ const FilterOptions = ({filterControl, active, setActive}) => {
             </div>
 
             <div className='price-category space-y-5'>
-                <button className='text-28 m-headings text-[rgba(0, 0, 0, 1)] flex-center sm:text-lg' onClick={()=>setActive2(!active2)}>
+                <button className='filter-head text-[rgba(0, 0, 0, 1)]' onClick={()=>setActive2(!active2)}>
                     Price
                     <span className='pt-1'>{active2?down:up}</span>
                 </button>
@@ -51,7 +51,7 @@ const FilterOptions = ({filterControl, active, setActive}) => {
             </div>
 
             <div className="artist-category space-y-5">
-                <button className='text-28 m-headings text-[rgba(0, 0, 0, 1)] flex-center sm:text-lg' onClick={()=>setActive3(!active3)}>
+                <button className='filter-head text-[rgba(0, 0, 0, 1)]' onClick={()=>setActive3(!active3)}>
                     By Artist
                     <span className='pt-1'>{active3?down:up}</span>
                 </button>
@@ -65,7 +65,7 @@ const FilterOptions = ({filterControl, active, setActive}) => {
             </div>
 
             <div className='collection-category'>
-                <button className='text-28 m-headings text-[rgba(0, 0, 0, 1)] flex-center sm:text-lg'>
+                <button className='filter-head text-[rgba(0, 0, 0, 1)]'>
                     Collection year
                     <span className='pt-1'>{down}</span>
                 </button>

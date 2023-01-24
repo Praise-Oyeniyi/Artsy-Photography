@@ -4,7 +4,7 @@
 
 const Header = ({Nav, cart}) => {
   return (
-    <header className='w-5/6 mx-auto my-10 space-y-10 sm:w-full'>
+    <header className='w-5/6 mx-auto my-10 space-y-10 sm:w-full med:w-[90%]'>
         <Nav cart={cart}/>
         <div className="header-text w-full mx-auto space-y-10 text-center sm:space-y-5 sm:w-5/6" >
           <h2 className='text-80 tracking-wide leading-snug header-main font-extrabold sm:text-3xl sm:leading-relaxed'>Photography is poetry & beautiful untold stories</h2>

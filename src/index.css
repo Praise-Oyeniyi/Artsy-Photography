@@ -13,7 +13,7 @@
     @apply flex flex-col;
   }
   .see-more{
-    @apply h-12 text-24 p-4 border-black border rounded-md w-[18%] mx-auto flex-center justify-center my-10 m-headings font-semibold;
+    @apply h-12 text-24 p-4 border-black border rounded-md w-[18%] mx-auto flex-center justify-center my-10 m-headings font-semibold tab:w-3/6;
   }
   .np-button{
     @apply bg-np-button-bg h-10 w-10 rounded-full ;
@@ -137,6 +137,9 @@
   }
   .filter-image{
     @apply bg-black h-full object-cover w-full rounded-md ;
+  }
+  .filter-head{
+    @apply text-28 m-headings flex-center sm:text-lg !font-semibold;
   }
 
 

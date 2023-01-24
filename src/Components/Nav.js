@@ -10,10 +10,10 @@ const Nav = ({cart}) => {
 
   return (
     <nav className='w-full flex-center z-[9999] pointer-events-auto font-[satoshi] max-w-full sm:px-5 relative'>
-        <FiMenu className='lg:hidden text-3xl' onClick={()=>setActive(true)}/>
+        <FiMenu className='lg:hidden tab:flex text-3xl med:hidden' onClick={()=>setActive(true)}/>
         <NavLink to='/'><h3 className="logo nav-logo">Artsy.</h3></NavLink>
 
-        <ul className='flex space-x-8 text-24 font-normal cursor-pointer sm:hidden'>
+        <ul className='flex space-x-8 text-24 font-normal cursor-pointer sm:hidden tab:hidden'>
             <NavLink to='/'><li className=''>Home</li></NavLink>
             <NavLink to='/Marketplace'><li>Marketplace</li></NavLink>
             <NavLink to='/AuctionsPage'><li>Auctions</li></NavLink>
@@ -28,7 +28,7 @@ const Nav = ({cart}) => {
               <span className={`absolute text-5xl -top-10 -right-2 animate-pulse ${cart.length===0?'text-body-bg':'text-red'}` }>.</span>
             </div>
           </NavLink>
-          <NavLink to='/Drop' className='sm:hidden'><FiBell/></NavLink>
+          <NavLink to='/Drop' className='sm:hidden tab:hidden'><FiBell/></NavLink>
         </div>
 
 

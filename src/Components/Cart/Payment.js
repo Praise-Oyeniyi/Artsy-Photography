@@ -4,15 +4,21 @@ import img1 from '../Icons/MetaMask.png';
 import img2 from '../Icons/Coinbase.png';
 import img3 from '../Icons/Phantom.png';
 import img4 from '../Icons/Wallet.png';
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
-const Payment = ({CartTotal, itemTotal, cart}) => {
+const Payment = ({CartTotal, itemTotal, cart, updateCart, Halved}) => {
     const navigate = useNavigate();
+
+    const Finish = () =>{
+        navigate('/carts/thank-you')
+        localStorage.removeItem('cart');
+        updateCart([]);
+    }
 
 
   return (
     <div className="payment-outer flex-column text-[#616161] space-y-10 sm:space-y-5">
-        <h4 onClick={()=>navigate('/')} className="text-base font-semibold text-[#BCB7B7] lg:hidden pb-4">Home / Marketplace / Cart / Shipping / <span className='text-black font-semibold'>Payment</span></h4>
+        <h4 className="text-base font-semibold text-[#BCB7B7] lg:hidden pb-4"><NavLink to='/'>Home</NavLink> / <NavLink to='/MarketPlace'>Marketplace</NavLink> / <span onClick={()=>Halved('shopping')}>Cart</span> / <span onClick={()=>Halved('shipping')}>Shipping</span> / <span className='text-black font-semibold'>Payment</span></h4>
          
         <div className="payment-top flex-center sm:justify-start">
             <h4 className='text-28 text-[#292929] font-semibold sm:hidden'>Payment method</h4>
@@ -83,7 +89,10 @@ const Payment = ({CartTotal, itemTotal, cart}) => {
                         </div>
                     </div>
 
-                    <button className='px-16 h-20 mt-14 sm:rounded-sm sm:px-8 sm:mx-auto sm:h-12 bg-blue w-full rounded-lg text-24 sm:w-4/6 text-white flex-center justify-center' type="submit">
+                    <button 
+                        className='px-16 h-20 mt-14 sm:rounded-sm sm:px-8 sm:mx-auto sm:h-12 bg-blue w-full rounded-lg text-24 sm:w-4/6 text-white flex-center justify-center' 
+                        type="submit" 
+                        onClick={()=>Finish()}>
                         Confirm
                     </button>
                     

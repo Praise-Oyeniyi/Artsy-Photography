@@ -10,7 +10,7 @@ const Footer = ({useNavigate}) => {
   return (
     <div>
       <div className="newsletter-outer w-full py-14 relative sm:pt-0">
-        <div className="newsletter w-[92%] left-[4%] sm:left-[2%]">
+        <div className="newsletter w-[92%] left-[4%] sm:left-[2%] med:w-[95%] med:left-[1%]">
           <h3 className='text-3xl font-[Baskervville] sm:text-2xl'>
             NEWSLETTER
           </h3>
@@ -25,7 +25,7 @@ const Footer = ({useNavigate}) => {
       </div>
 
       <footer className='w-full mt-60 cursor-pointer'>
-        <div className='w-5/6 mx-auto flex justify-evenly items-center pb-10 sm:hidden'>
+        <div className='w-5/6 mx-auto flex justify-evenly items-center pb-10 sm:hidden med:w-full'>
           <h3 className="logo text-48 uppercase font-semibold header-main">ARTSY.</h3>
           <ul className='space-y-5 text-26'>
             <li onClick={()=>navigate('/')}>Home</li>

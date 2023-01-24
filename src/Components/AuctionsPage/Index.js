@@ -1,23 +1,25 @@
 import Cimage from './../Images/create-image.png';
 import Cimage1 from './../Images/create-image1.png';
-
 import Heart from './../Icons/Vector12.svg';
+import { motion } from 'framer-motion';
 
-const Index = ({Nav,NavLink, useNavigate, AuctionsData, cart}) => {
+const Index = ({Nav,NavLink, useNavigate, AuctionsData, cart, PageAnimate}) => {
   const navigate = useNavigate();
 
   return (
-    <div className='w-full auctions-outer space-y-10 bg-body-bg overflow-x-hidden py-10 text-header-p font-normal mb-56 sm:mb-10'>
+    <motion.div
+      variants={PageAnimate} initial='init' animate='animate' exit='exit' 
+      className='w-full auctions-outer space-y-10 bg-body-bg overflow-x-hidden py-10 text-header-p font-normal mb-56 sm:mb-10'>
       <div className="w-5/6 mx-auto sm:w-full">
         <Nav cart={cart}/>
 
 
 
-        <div className="auction-body mt-16 space-y-10 sm:w-[95%] sm:mx-auto">
+        <div className="auction-body mt-16 space-y-10 sm:w-[95%] sm:mx-auto med:w-[90%]">
           <h4 className="text-24 font-semibold sm:hidden"><NavLink to='/'><span className='text-[#BCB7B7]'>Home/</span></NavLink>Auctions</h4>
           <h3 className="text-28 font-bold sm:text-15">Here’s an overview of products actively on auction, explore!</h3>
 
-          <section className="slider-outer relative w-full h-96 sm:h-auto">
+          <section className="slider-outer relative w-full h-96 sm:h-auto med:h-56">
             <div className="slider absolute w-screen left-0 top-0 flex-center gap-x-5 sm:items-start overflow-auto">
               {
                 AuctionsData.map(e=>(
@@ -35,7 +37,7 @@ const Index = ({Nav,NavLink, useNavigate, AuctionsData, cart}) => {
               ))}
             </div>
 
-            <div className="dots flex-center justify-center relative top-[28rem] sm:top-[14rem] text-center w-full space-x-2">
+            <div className="dots flex-center justify-center relative top-[28rem] sm:top-[14rem] text-center w-full space-x-2 med:top-[14rem]">
               <span className='!bg-light-blue dots-span'></span>
               <span className='dots-span'></span>
               <span className='dots-span'></span>
@@ -45,7 +47,7 @@ const Index = ({Nav,NavLink, useNavigate, AuctionsData, cart}) => {
 
           <section className='pt-10 space-y-16 sm:relative sm:top-[12rem] sm:space-y-5'>
             <h3 className='text-36 sm:text-xl'>Top bids from popular creators</h3>
-            <div className="auct-creators-outer flex-center gap-x-20 sm:flex-column sm:gap-y-10">
+            <div className="auct-creators-outer flex-center gap-x-20 sm:flex-column sm:gap-y-10 med:gap-x-10">
 
               <div className="creator-container">
                 <div className='creator-container-inner '>
@@ -94,7 +96,7 @@ const Index = ({Nav,NavLink, useNavigate, AuctionsData, cart}) => {
           </section>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

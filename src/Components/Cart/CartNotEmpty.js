@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import {AiOutlineClose, AiFillLock} from 'react-icons/ai'
 import CartTotal from './CartTotal';
 import DetailsForm from './DetailsForm';
@@ -10,7 +11,7 @@ import Payment from './Payment';
 
 
 
-const CartNotEmpty = ({cart,deleteItem,navigate,Half, Halved,cartItemsAdd,cartItemsRemove }) => {
+const CartNotEmpty = ({cart,deleteItem,navigate,Half, Halved,cartItemsAdd,cartItemsRemove, updateCart }) => {
     
     var itemTotal = 0;
     
@@ -31,11 +32,11 @@ const CartNotEmpty = ({cart,deleteItem,navigate,Half, Halved,cartItemsAdd,cartIt
                     <li className={`pb-2 ${Half==='shipping'?'payment-active':''}`} onClick={()=>Halved('shipping')}>Shipping Details</li>
                     <li className={`pb-2 ${Half==='payment'?'payment-active':''}`} onClick={()=>Halved('payment')}>Payment Details</li>
                 </ul>
-                <h4 onClick={()=>navigate('/')} className={`text-lg font-semibold sm:mx-3 text-[#BCB7B7] lg:hidden pb-12 ${Half !== 'shopping'? 'hidden': ''}`}>Home / Marketplace /<span className='text-black font-semibold'> Cart</span></h4>
+                <h4 className={`text-lg font-semibold sm:mx-3 text-[#BCB7B7] lg:hidden pb-12 ${Half !== 'shopping'? 'hidden': ''}`}><NavLink to='/'>Home</NavLink> / <NavLink to='/MarketPlace'>Marketplace</NavLink> / <span className='text-black font-semibold'> Cart</span></h4>
 
                 <div className={`carts-items-outer sm:px-3 relative ${Half ==='shipping'?'flex-center items-start gap-x-10':'mb-48'}`}>
                     <div className={`payment hidden ${Half === 'payment'?'!block': ''}`}>
-                       <Payment CartTotal={CartTotal} itemTotal={itemTotal} cart={cart}/>
+                       <Payment CartTotal={CartTotal} itemTotal={itemTotal} cart={cart} updateCart={updateCart} Halved={Halved}/>
                     </div>
 
                     <DetailsForm Half={Half} Halved={Halved}/>
