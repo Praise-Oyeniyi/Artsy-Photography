@@ -24,7 +24,7 @@ const Featured = ({next, useNavigate, FtData}) => {
                 <div className={`featured-product-img w-full  ${e.id%2===0? 'order-2 ml-10 sm:order-1 sm:ml-0':''}`} onClick={()=>navigate(`/market/${e.id}`)}>
                   <img src={e.image} alt="" className='w-full sm:h-[15em]' />
                   
-                  <div className='featured-pd-effect sm:flex-col justify-start p-10'>
+                  <div className='featured-pd-effect sm:flex-col sm:justify-start p-10'>
                     <p className='featured-pd-effect-text sm:hidden' onClick={()=>navigate(`/market/${e.id}`)}>View Product</p>
                     <p className='lg:hidden text-white text-3xl font-bold pb-10 header-main text-center'>{e.name}</p>
                     <img src={next} alt="marketplace-icon" className='border border-white rounded-full p-3 h-12 w-12 sm:place-self-end' onClick={()=>navigate(`/market/${e.id}`)}/>

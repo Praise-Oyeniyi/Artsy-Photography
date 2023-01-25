@@ -10,7 +10,7 @@ const DetailsForm = ({Half, Halved}) => {
 
   return (
     <div className={`${Half === 'shipping'?'details-form w-3/6 sm:min-w-full':'hidden'} relative`}>
-    <h4 className="text-base font-semibold text-[#BCB7B7] lg:hidden pb-4"><NavLink to='/'>Home</NavLink> / <NavLink to='/MarketPlace'>Marketplace</NavLink> / <span onClick={()=>Halved('shopping')}>Cart</span> / <span className='text-black font-semibold' >Shipping</span></h4>
+        <h4 className="text-base font-semibold text-[#BCB7B7] lg:hidden pb-4"><NavLink to='/'>Home</NavLink> / <NavLink to='/MarketPlace'>Marketplace</NavLink> / <span onClick={()=>Halved('shopping')}>Cart</span> / <span className='text-black font-semibold' >Shipping</span></h4>
 
         <form className='text-[#888888] space-y-8 sm:space-4' onSubmit={e => e.preventDefault()} noValidate>
 

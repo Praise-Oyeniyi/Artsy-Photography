@@ -77,3 +77,5 @@ export const Explore = [
     price:'3.20'
     },
 ]
+
+export const ProductAcc =['Description', 'Listings', 'Status'];

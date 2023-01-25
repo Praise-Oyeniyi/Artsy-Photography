@@ -4,7 +4,8 @@ import { useParams, NavLink} from 'react-router-dom';
 import { useState } from 'react';
 import {FaHeart} from 'react-icons/fa';
 import {AiOutlineHeart} from 'react-icons/ai'
-import { Explore } from './FeaturedData';
+import { Explore, ProductAcc } from './FeaturedData';
+import { motion } from 'framer-motion';
 
 
 
@@ -35,7 +36,16 @@ const FtDescription = ({FtData, FilterData, cart, Atcart}) => {
         return UpdateCounter(count);
     }
 
-    
+    const [faq,faqOpen] = useState(null)
+
+    const Toggle = (index) =>{
+        if(faq === index){
+            return faqOpen(null)
+        }
+
+        faqOpen(index);
+    }
+
 
 
 
@@ -76,28 +86,32 @@ const FtDescription = ({FtData, FilterData, cart, Atcart}) => {
                             </div>
                         </div>
 
-                        <div className='desc-accordion-outer px-5 py-10 border-b sm:py-5 sm:border-y sm:px-0'>
-                            <div className="desc-accordion-title">
-                                <h4 className='text-32 font-medium'>Description</h4>
-                                <i className="fas fa-chevron-down text-base"></i>
+                        {ProductAcc.map((heading, index)=>(
+                            <div key={index} className='desc-accordion-outer px-5 py-10 border-b sm:py-5 sm:border-y sm:px-0' onClick={()=> Toggle(index)}>
+                                <div className="desc-accordion-title">
+                                    <h4 className='text-32 font-medium'>{heading}</h4>
+                                    <motion.i
+                                        initial={{ scale:1}} whileTap={{ scale:2}} animate={{rotate:180}} transition={{duration:.4, type:'spring'}}
+                                     className={`fas ${faq===index?'fa-chevron-up':'fa-chevron-down'} text-base`}></motion.i>
+                                </div>
+                                {faq === index?<motion.p 
+                                    initial={{y:-20, opacity:0}} animate={{y:0, opacity:1}} transition={{type:'ease'}}
+                                    className={"pt-5 text-sm"}>
+                                    {selected.description}
+                                </motion.p>: ''}
                             </div>
-                        </div>
-                        <div className='desc-accordion-outer px-5 py-10 border-b sm:py-5 sm:px-0'>
-                            <div className="desc-accordion-title">
-                                <h4 className='text-32 font-medium'>Listings</h4>
-                                <i className="fas fa-chevron-down text-base"></i>
-                            </div>
-                        </div>
-                        <div className='desc-accordion-outer px-5 py-10 sm:py-5 sm:border-b sm:px-0'>
-                            <div className="desc-accordion-title">
-                                <h4 className='text-32 font-medium'>Status</h4>
-                                <i className="fas fa-chevron-down text-base"></i>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
 
                 
+
+
+
+
+
+
+
                 <div className="ftdesc-explore-outer pt-10 space-y-16 sm:space-y-8 sm:w-[95%] sm:mx-auto">
                     <div className="rounded-xl explore-bar flex-center py-5 px-6 sm:!shadow-none sm:px-0 sm:py-0">
                         <p className=' text-28 font-semibold w-full sm:hidden'>Explore more from this collection</p>
@@ -107,6 +121,8 @@ const FtDescription = ({FtData, FilterData, cart, Atcart}) => {
                             <button className='np-button !shadow-none border-[.5px] border-[#616161]'><i className="fas fa-chevron-right text-base"></i></button>
                         </div>
                     </div>
+
+
                     <div>
                         <div className="explore-images flex-center justify-start gap-x-8 w-full overflow-x-auto">
 
@@ -127,6 +143,10 @@ const FtDescription = ({FtData, FilterData, cart, Atcart}) => {
                         </div>
 
                     </div>
+
+
+
+
                     <button className='see-more sm:w-3/6 bg-gradient-to-r from-[#78A3AD] to-[#C056097D] p-0 border-none'><span className='bg-body-bg w-[99%] py-[0.55rem] sm:py-[0.8rem] rounded-md'>Explore All</span></button>
                 </div>
             </div>

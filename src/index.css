@@ -6,6 +6,9 @@
   body{
     @apply font-[satoshi];
   }
+  .active li{
+    @apply border-b-[#292929] border-b-2;
+  }
   .flex-center{
     @apply flex justify-between items-center w-full;
   }
@@ -13,7 +16,7 @@
     @apply flex flex-col;
   }
   .see-more{
-    @apply h-12 text-24 p-4 border-black border rounded-md w-[18%] mx-auto flex-center justify-center my-10 m-headings font-semibold tab:w-3/6;
+    @apply h-12 text-24 p-4 border-black border rounded-md w-[18%] mx-auto flex-center justify-center my-10 m-headings font-semibold outline-none tab:w-3/6;
   }
   .np-button{
     @apply bg-np-button-bg h-10 w-10 rounded-full ;

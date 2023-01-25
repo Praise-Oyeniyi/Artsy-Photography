@@ -34,15 +34,15 @@ const Nav = ({cart}) => {
 
 
 
-        <div className={`mobile-nav transition-all duration-1000 delay-300 ease-in-out ${active?'left-0': ' left-[-100vw]'}`} onClick={()=>setActive(!active)}>
+        <div className={`mobile-nav transition-all duration-500 delay-150 pt-10 ease-in-out ${active?'left-0': ' left-[-100vw]'}`} onClick={()=>setActive(!active)}>
           <div className="nav-top flex-center">
             <NavLink to='/'><h3 className="logo nav-logo">Artsy.</h3></NavLink>
             <AiOutlineClose className='text-2xl' onClick={()=>setActive(!active)}/>
           </div>
 
           <ul className='=text-24 font-normal cursor-pointer flex-column space-y-5 text-2xl '>
-              <NavLink to='/'><li className='sm:!border-none'>Home</li></NavLink>
-              <NavLink to='/Marketplace' className='sm:!border-none'><li>Marketplace</li></NavLink>
+              <NavLink to='/'><li className='sm:!border-b-none'>Home</li></NavLink>
+              <NavLink to='/Marketplace' className='sm:!border-b-none'><li>Marketplace</li></NavLink>
               <NavLink to='/AuctionsPage' className='sm:!border-none'><li>Auctions</li></NavLink>
               <NavLink to='/Drop' className='sm:!border-body-bg'><li>Drop</li></NavLink>
           </ul>
