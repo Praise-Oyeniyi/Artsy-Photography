@@ -87,11 +87,11 @@ const FtDescription = ({FtData, FilterData, cart, Atcart}) => {
                         </div>
 
                         {ProductAcc.map((heading, index)=>(
-                            <div key={index} className='desc-accordion-outer px-5 py-10 border-b sm:py-5 sm:border-y sm:px-0' onClick={()=> Toggle(index)}>
+                            <div key={index} className={`desc-accordion-outer px-5 py-10 border-b sm:py-5 sm:border-b-body-bg sm:border-y sm:px-0 ${heading.length===2?'sm:!border-b-green':''}`} onClick={()=> Toggle(index)}>
                                 <div className="desc-accordion-title">
                                     <h4 className='text-32 font-medium'>{heading}</h4>
                                     <motion.i
-                                        initial={{ scale:1}} whileTap={{ scale:2}} animate={{rotate:180}} transition={{duration:.4, type:'spring'}}
+                                        initial={{ scale:1}} whileTap={{ scale:2}} transition={{duration:.4, type:'spring'}}
                                      className={`fas ${faq===index?'fa-chevron-up':'fa-chevron-down'} text-base`}></motion.i>
                                 </div>
                                 {faq === index?<motion.p 

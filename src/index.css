@@ -179,7 +179,7 @@
     @apply border-b-main-text border-b pb-10;
   }
   .auctions-img-outer{
-    @apply  relative hover:scale-[.75] transition-all ease-out duration-[.5s] hover:top-[-3rem] hover:left-[-4rem];
+    @apply  relative hover:scale-[.75] transition-all ease-out duration-[.5s] hover:top-[-3rem] sm:!left-0 hover:left-[-4rem];
   }
   .auctions-img-hover{
     @apply absolute top-0 left-0 bg-black w-full h-full rounded-3xl flex-center justify-center bg-opacity-50 opacity-0;
