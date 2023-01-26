@@ -15,6 +15,7 @@ export const FilterData =[
         price:"3.90",
         image:Filter1,
         category: 'Editorials',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor pur',
     },
     {
         id:11,
@@ -22,6 +23,7 @@ export const FilterData =[
         price:"100.0",
         image:Filter2,
         category: 'Arts & Museum',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor pur',
     },
     {
         id:12,
@@ -29,6 +31,7 @@ export const FilterData =[
         price:"3.97",
         image:Filter3,
         category: 'Optics',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor pur',
     },
     {
         id:13,
@@ -36,6 +39,7 @@ export const FilterData =[
         price:"63.90",
         image:Filter4,
         category: 'Fashion',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor pur',
     },
     {
         id:14,
@@ -43,6 +47,7 @@ export const FilterData =[
         price:"43.90",
         image:Filter5,
         category: 'Editorials',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor pur',
     },
     {
         id:15,
@@ -50,6 +55,7 @@ export const FilterData =[
         price:"93.90",
         image:Filter6,
         category: 'Nature',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor pur',
     },
     {
         id:16,
@@ -57,6 +63,7 @@ export const FilterData =[
         price:"13.90",
         image:Filter7,
         category: 'Arts & Museum',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor pur',
     },
     {
         id:17,
@@ -64,6 +71,7 @@ export const FilterData =[
         price:"45.90",
         image:Filter8,
         category: 'Optics',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor pur',
     },
     {
         id:18,
@@ -71,6 +79,7 @@ export const FilterData =[
         price:"39.90",
         image:Filter9,
         category: 'Fashion',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor pur',
     },
 ]
 

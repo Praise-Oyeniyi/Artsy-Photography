@@ -1,7 +1,11 @@
 import React from 'react'
+import { useState } from 'react';
 import {FaHeart, FaPaperPlane} from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 const BidSection = ({bidFunction, setBid, addBid, bidss,bid}) => {
+    const [heart, flyHeart] = useState(false);
+
   return (
     
     <div className="main-auction-r-inner h-full sm:fixed sm:w-screen sm:h-[40vh] sm:top-[52vh] sm:left-5 ">
@@ -33,8 +37,14 @@ const BidSection = ({bidFunction, setBid, addBid, bidss,bid}) => {
                     />
                     <FaPaperPlane className='text-2xl w-auto' onClick={()=>bidFunction()}/>
                 </div>
-                <div className="heart-div h-10 w-10 rounded-full border border-grey flex-center justify-center" >
-                    <FaHeart className='text-2xl text-red'/>
+                <div className="heart-div h-10 w-10 rounded-full border border-grey flex-center justify-center" onClick={()=>flyHeart(!heart)}>
+                    <FaHeart className='text-2xl text-red relative'/>
+                        <motion.span 
+                            className='absolute'
+                            initial={{y:0}} whileTap={{ y:-70+'vh', x:3, scale:1.3, opacity:.4, rotate:-90}} transition={{duration:1, type:'ease'}}>
+                            <FaHeart 
+                            className='text-2xl text-red ' />
+                        </motion.span>
                 </div>
             </div>
 

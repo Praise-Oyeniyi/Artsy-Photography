@@ -10,6 +10,12 @@ import Explore3 from './../Images/explore3.png';
 import Explore4 from './../Images/explore4.png';
 import Explore5 from './../Images/explore5.png';
 
+import slide1 from './../Images/slide1.png'
+import slide2 from './../Images/slide2.png'
+import slide3 from './../Images/slide3.png'
+import slide4 from './../Images/slide4.png'
+import slide5 from './../Images/slide5.png'
+
 
 export const FtData =[
     {
@@ -77,5 +83,7 @@ export const Explore = [
     price:'3.20'
     },
 ]
+
+export const ImageSlider = [slide1, slide2, slide3, slide4,slide5]
 
 export const ProductAcc =['Description', 'Listings', 'Status'];

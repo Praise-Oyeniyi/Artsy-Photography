@@ -6,6 +6,8 @@ import {FaHeart} from 'react-icons/fa';
 import {AiOutlineHeart} from 'react-icons/ai'
 import { Explore, ProductAcc } from './FeaturedData';
 import { motion } from 'framer-motion';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 
 
@@ -17,6 +19,26 @@ const FtDescription = ({FtData, FilterData, cart, Atcart}) => {
     const [like, Updatelike] = useState(false)
     var [count, UpdateCounter] = useState(1);
     const {id} = useParams();
+
+    const responsive = {
+        superLargeDesktop: {
+          // the naming can be any, depends on you.
+          breakpoint: { max: 4000, min: 3000 },
+          items: 5
+        },
+        desktop: {
+          breakpoint: { max: 3000, min: 1024 },
+          items: 3
+        },
+        tablet: {
+          breakpoint: { max: 1024, min: 464 },
+          items: 2
+        },
+        mobile: {
+          breakpoint: { max: 464, min: 0 },
+          items: 1
+        }
+      };
 
     var selected;
     if(id>=10){
@@ -87,18 +109,20 @@ const FtDescription = ({FtData, FilterData, cart, Atcart}) => {
                         </div>
 
                         {ProductAcc.map((heading, index)=>(
-                            <div key={index} className={`desc-accordion-outer px-5 py-10 border-b sm:py-5 sm:border-b-body-bg sm:border-y sm:px-0 ${heading.length===2?'sm:!border-b-green':''}`} onClick={()=> Toggle(index)}>
+                            <div key={index} className={`desc-accordion-outer px-5 py-10 border-b sm:py-5 sm:border-b-0 sm:border-y sm:px-0`} onClick={()=> Toggle(index)}>
                                 <div className="desc-accordion-title">
                                     <h4 className='text-32 font-medium'>{heading}</h4>
                                     <motion.i
                                         initial={{ scale:1}} whileTap={{ scale:2}} transition={{duration:.4, type:'spring'}}
-                                     className={`fas ${faq===index?'fa-chevron-up':'fa-chevron-down'} text-base`}></motion.i>
+                                     className={`fas ${faq===index?'fa-chevron-up':'fa-chevron-down'} text-base`}>
+                                    </motion.i>
                                 </div>
-                                {faq === index?<motion.p 
-                                    initial={{y:-20, opacity:0}} animate={{y:0, opacity:1}} transition={{type:'ease'}}
-                                    className={"pt-5 text-sm"}>
-                                    {selected.description}
-                                </motion.p>: ''}
+                                {faq === index?
+                                    <motion.p 
+                                        initial={{y:-20, opacity:0}} animate={{y:0, opacity:1}} transition={{type:'ease'}}
+                                        className={"pt-5 text-sm text-black"}>
+                                        {selected.description}
+                                    </motion.p>: ''}
                             </div>
                         ))}
                     </div>
@@ -124,23 +148,21 @@ const FtDescription = ({FtData, FilterData, cart, Atcart}) => {
 
 
                     <div>
-                        <div className="explore-images flex-center justify-start gap-x-8 w-full overflow-x-auto">
-
-                            {Explore.map((e,index)=>(
-                                <div className="flex-column space-y-3 p-3 px-5 border border-[#333] min-w-[30%] sm:min-w-[100%]" key={index}>
-                                    <AiOutlineHeart className="ft-desc-explore-font"/>
-                                    <img src={e.image} alt="" className=' h-72 w-full'/>
-                                    <div className='text-32 font-medium flex-center'>
-                                        <h3 className='font-semibold'>{e.name}</h3>
-                                        <div className='flex-center justify-end space-x-1'>
-                                            <i className="fa-brands fa-ethereum text-main-text text-2xl"></i>
-                                            <h4>{e.price}</h4>
+                            <Carousel responsive={responsive} className="explore-images flex-center justify-start !gap-x-8 w-full overflow-x-auto">
+                                {Explore.map((e,index)=>(
+                                    <div className="flex-column space-y-3 p-3 px-5 border border-[#333] min-w-[30%] sm:min-w-[100%] lg:mr-5" key={index}>
+                                        <AiOutlineHeart className="ft-desc-explore-font"/>
+                                        <img src={e.image} alt="" className=' h-72 w-full'/>
+                                        <div className='text-32 font-medium flex-center'>
+                                            <h3 className='font-semibold'>{e.name}</h3>
+                                            <div className='flex-center justify-end space-x-1'>
+                                                <i className="fa-brands fa-ethereum text-main-text text-2xl"></i>
+                                                <h4>{e.price}</h4>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            ))}
-                            
-                        </div>
+                                ))}
+                            </Carousel>
 
                     </div>
 

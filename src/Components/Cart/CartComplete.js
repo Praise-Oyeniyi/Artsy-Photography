@@ -21,7 +21,7 @@ const CartComplete = ({navigate, cart, Nav}) => {
                     <div className='justify-center flex-column items-center space-y-5'>
                         <img src={Icon3} alt="" className='w-auto sm:h-[15em]'/>
                         <div className='space-y-3 text-center'>
-                            <h3 className='text-3xl font-medium sm:text-lg'>Hey {`Celestina`}, thank you for your purchase. </h3>
+                            <h3 className='text-3xl font-medium sm:text-lg'>Hey {`Guest`}, thank you for your purchase. </h3>
                             <p className='text-24 sm:text-base font-medium'>You are amazing. Cheers to being <span className='text-blue'>ARTSY!</span></p>
                         </div>
                     </div>

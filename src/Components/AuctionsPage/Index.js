@@ -1,10 +1,24 @@
 import Cimage from './../Images/create-image.png';
 import Cimage1 from './../Images/create-image1.png';
 import Heart from './../Icons/Vector12.svg';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
+import {AiOutlineHeart} from 'react-icons/ai'
+import {FaHeart} from 'react-icons/fa';
+
+
+
 
 const Index = ({Nav,NavLink, useNavigate, AuctionsData, cart, PageAnimate}) => {
   const navigate = useNavigate();
+  const [like, Updatelike] = useState(null)
+  const Toggle = (index) =>{
+    if(like === index){
+        return Updatelike(null)
+    }
+
+    Updatelike(index);
+}
 
   return (
     <motion.div
@@ -51,7 +65,10 @@ const Index = ({Nav,NavLink, useNavigate, AuctionsData, cart, PageAnimate}) => {
 
               <div className="creator-container">
                 <div className='creator-container-inner '>
-                  <img src={Heart} alt="icon" className='heart-icon '/>
+                  <button 
+                    className='heart-icon border border-header-p flex-center justify-center sm:p-2' onClick={()=>Toggle(1)}>
+                    {like ===1?<AiOutlineHeart className="text-header-p text-4xl font-thin"/>: <FaHeart className="text-red text-3xl font-thin"/>}
+                  </button>
                   <img src={Cimage} alt="creator-main" className='h-full sm:px-4'/>
                   <h3 className='text-32 font-bold px-8 py-6 sm:py-3 sm:px-4'>Out of the box</h3>
                 </div>
@@ -72,7 +89,10 @@ const Index = ({Nav,NavLink, useNavigate, AuctionsData, cart, PageAnimate}) => {
 
               <div className="creator-container">
                 <div className='creator-container-inner '>
-                  <img src={Heart} alt="icon" className='heart-icon'/>
+                  <button 
+                    className='heart-icon border border-header-p flex-center justify-center sm:p-2' onClick={()=>Toggle(2)}>
+                    {like===2?<AiOutlineHeart className="text-header-p text-4xl font-thin"/>: <FaHeart className="text-red text-3xl font-thin"/>}
+                  </button>
                   <img src={Cimage1} alt="creator-main" className='h-full sm:px-4'/>
                   <h3 className='text-32 font-bold px-8 py-6 sm:py-3 sm:px-4'>Falling apart</h3>
                 </div>
