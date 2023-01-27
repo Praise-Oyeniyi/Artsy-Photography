@@ -109,4 +109,14 @@
     background-image: url("./Components/Images/Ellipse\ 73.png"), url("./Components/Images/Ellipse\ 74.png"), url("./Components/Images/Ellipse\ 75.png");
     background-repeat: no-repeat;
     background-position: top left, center right, top center;
+    animation: bgAnimate 5s ease-in-out infinite alternate;
+}
+
+@keyframes bgAnimate{
+    0% {
+        background-position: top left, center right, top center;
+    }
+    100% {
+        background-position: bottom left, top right, bottom center;
+    }
 }

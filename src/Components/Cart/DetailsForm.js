@@ -1,18 +1,25 @@
-import React from 'react'
+import {React, useEffect, useState} from 'react'
 import { NavLink, useNavigate } from 'react-router-dom';
 
 const DetailsForm = ({Half, Halved}) => {
     const navigate = useNavigate();
+    const [guest, knownGuest] = useState('Guest')
 
-    const onSubmit = () => {
+    const formed =(e)=>{
+        e.preventDefault();
         Halved('payment');
+        knownGuest(e.target.name.value);
     }
+
+    useEffect(() => {
+        localStorage.setItem('name', JSON.stringify(guest));
+    }, [guest])
 
   return (
     <div className={`${Half === 'shipping'?'details-form w-3/6 sm:min-w-full':'hidden'} relative`}>
         <h4 className="text-base font-semibold text-[#BCB7B7] lg:hidden pb-4"><NavLink to='/'>Home</NavLink> / <NavLink to='/MarketPlace'>Marketplace</NavLink> / <span onClick={()=>Halved('shopping')}>Cart</span> / <span className='text-black font-semibold' >Shipping</span></h4>
 
-        <form className='text-[#888888] space-y-8 sm:space-4' onSubmit={e => e.preventDefault()} noValidate>
+        <form className='text-[#888888] space-y-8 sm:space-4' onSubmit={(e)=>formed(e)}>
 
             <div className="form-control">
                 <label htmlFor="email" className='label'>Your Email</label>
@@ -58,7 +65,7 @@ const DetailsForm = ({Half, Halved}) => {
                 <input type="phone" id="phone" name='phone' placeholder="0812 3456 785" className='form-input' required/>
             </div>
 
-            <button onClick={onSubmit} className='px-16 sm:rounded-sm sm:px-8 sm:mx-auto h-20 sm:h-12 bg-blue w-full rounded-lg text-24 sm:w-4/6 text-white flex-center justify-center' type='submit'>
+            <button className='px-16 sm:rounded-sm sm:px-8 sm:mx-auto h-20 sm:h-12 bg-blue w-full rounded-lg text-24 sm:w-4/6 text-white flex-center justify-center' type='submit'>
                 Proceed to payment
             </button>
             <p className='text-24 text-blue border-b border-blue font-medium cursor-pointer mx-auto w-fit lg:hidden !mt-3' onClick={()=>navigate('/MarketPlace')}>Go back to cart </p>

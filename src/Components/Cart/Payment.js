@@ -9,7 +9,8 @@ import { NavLink, useNavigate } from 'react-router-dom';
 const Payment = ({CartTotal, itemTotal, cart, updateCart, Halved}) => {
     const navigate = useNavigate();
 
-    const Finish = () =>{
+    const Finish = (e) =>{
+        e.preventDefault();
         navigate('/carts/thank-you')
         localStorage.removeItem('cart');
         updateCart([]);
@@ -31,7 +32,7 @@ const Payment = ({CartTotal, itemTotal, cart, updateCart, Halved}) => {
         <div className="payment-bottom flex-center items-start gap-x-10">
 
             <div className="form-area w-3/6  sm:w-full">
-                <form action="">
+                <form action="" onSubmit={(e)=>Finish(e)}>
                     <div className='payment-form space-y-10 py-10 px-8 rounded-md sm:!shadow-none sm:px-1 sm:space-y-5 sm:py-0'>
                         <div className="flex-center justify-start items-start space-x-5 sm:space-x-2">
                             <input type="radio" name="select" id="select" className='form-input h-4 mt-2 accent-[#28A814] sm:mt-1' required/>
@@ -91,8 +92,7 @@ const Payment = ({CartTotal, itemTotal, cart, updateCart, Halved}) => {
 
                     <button 
                         className='px-16 h-20 mt-14 sm:rounded-sm sm:px-8 sm:mx-auto sm:h-12 bg-blue w-full rounded-lg text-24 sm:w-4/6 text-white flex-center justify-center' 
-                        type="submit" 
-                        onClick={()=>Finish()}>
+                        type="submit" >
                         Confirm
                     </button>
                     

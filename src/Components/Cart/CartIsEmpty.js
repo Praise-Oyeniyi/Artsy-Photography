@@ -6,8 +6,8 @@ import Icon3 from '../Images/empty.png'
 const CartIsEmpty = ({navigate, cart}) => {
 
   return (
-    <div className='absolute h-screen w-screen -top-16 left-0 z-[99] !overflow-hidden cart-c-bg'>
-        <div className="circles relative pointer-events-none sm:hidden">
+    <div className='absolute h-screen w-screen -top-16 left-0 z-[99] !overflow-hidden cart-c-bg pointer-events-none'>
+        <div className="circles relative pointer-events-none sm:hidden ">
             <img src={Icon1 } alt="" className=' sm:w-[16em]'/>
             <img src={Icon2} alt="" className='absolute top-0 sm:h-[18em]'/>
         </div>
