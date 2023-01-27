@@ -100,7 +100,7 @@ function App() {
   };
 
   return (
-    <AnimatePresence exitBeforeEnter initial={false}>
+    <AnimatePresence mode='wait' initial={false}>
         <Routes location={location} key={location.pathname}>
           <Route exact path='/' element={<Home next={next} Nav={Nav} useNavigate={useNavigate} cart={cart} PageAnimate={PageAnimate}/>}/>
           <Route path='/Marketplace' element={<MarketPlace Nav={Nav} cart={cart} PageAnimate={PageAnimate}/>}/>

@@ -21,7 +21,7 @@ const Creators = () => {
               <div className='mx-auto relative z-30 animate-[changeBg_10s_ease-in-out_infinite] !bg-no-repeat creator-animate h-[35rem] sm:h-[20rem]'></div>
             </div>
 
-            <p className='text-32 pr-16 text-gray-600 font-thin relative tracking-wide z-10 leading-normal sm:pr-0'>
+            <p className='text-32 pr-16 text-[#00000091] font-thin relative tracking-wide z-10 leading-normal sm:pr-0'>
               “Everything always looked better in black and white. Everything always  as if it were the first time; there's always 
               more people in a black and white photograph. It just makes it seem that there were more people at a gig, 
               more people at a football match, than with colour photography. Everything looks more exciting.”– Jack Lowden

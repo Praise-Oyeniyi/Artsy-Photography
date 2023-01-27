@@ -74,3 +74,39 @@
 .carts{
     transition: all 5s ease-in-out !important;
 }
+
+  
+/* @keyframes slide-left {
+    0% { transform: translateX(0);   }
+    100%{transform: translateX(-100%);}
+} */
+.slide-left:nth-child(odd) img{
+    animation: slideInFromLeft 1.5s ease-in-out infinite;
+    animation-delay: 1s;
+}
+.slide-left:nth-child(even) img{
+    animation: slideInFromRight 1.5s ease-in-out infinite;
+    animation-delay: 1s;
+}
+@keyframes slideInFromLeft {
+    from {
+      transform: translateX(-50%);
+    }
+    to {
+      transform: translateX(100%);
+    }
+}
+  
+@keyframes slideInFromRight{
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+}
+.cart-c-bg{
+    background-image: url("./Components/Images/Ellipse\ 73.png"), url("./Components/Images/Ellipse\ 74.png"), url("./Components/Images/Ellipse\ 75.png");
+    background-repeat: no-repeat;
+    background-position: top left, center right, top center;
+}
