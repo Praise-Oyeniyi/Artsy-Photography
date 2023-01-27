@@ -13,18 +13,21 @@ export const AuctionsData = [
         id:1,
         name:'option1',
         image:slide1,
+        bImage:'Aslider1.png',
         time:'6hr : 40mins: 15s',
     },
     {
         id:2,
         name:'option2',
         image:slide2,
+        bImage:'Aslider2.png',
         time:'6hr : 40mins: 15s',
     },
     {
         id:3,
         name:'option3',
         image:slide3,
+        bImage:'Aslider3.png',
         time:'6hr : 40mins: 15s',
     },
 ]

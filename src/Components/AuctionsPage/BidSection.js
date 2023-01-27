@@ -28,7 +28,7 @@ const BidSection = ({bidFunction, setBid, addBid, bidss,bid}) => {
                 <div className='border-grey border w-5/6 h-10 rounded-2xl p-2 px-4 flex-center sm:w-[70%]'>
                     <input 
                         type="text"  
-                        className='w-full h-full  outline-none border-none placeholder-auc-creator-text text-15 sm:bg-[transparent]' 
+                        className='w-full h-full sm:text-white  outline-none border-none placeholder-auc-creator-text text-15 sm:bg-[transparent]' 
                         placeholder='Place a bid...' 
                         value={bid}
                         required

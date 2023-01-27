@@ -184,9 +184,9 @@
   .auctions-img-hover{
     @apply absolute top-0 left-0 bg-black w-full h-full rounded-3xl flex-center justify-center bg-opacity-50 opacity-0;
   }
-  /* .featured-pd-effect-text{
-    @apply text-white text-28;
-  } */
+  .main-auction-left{
+    @apply w-full h-full text-white flex-column justify-between py-3 px-6 relative ;
+  }
 
 
 

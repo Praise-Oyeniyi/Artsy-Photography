@@ -6,6 +6,7 @@ import Icon3 from '../Images/cc.png'
 
 const CartComplete = ({ cart, Nav}) => {
     const storedName = JSON.parse(localStorage.getItem('name'));
+    console.log(storedName)
 
 
   return (

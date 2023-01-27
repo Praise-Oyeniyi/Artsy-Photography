@@ -1,12 +1,14 @@
-import { NavLink} from 'react-router-dom';
-import { AuctionsProfile } from './AuctionsData';
+import { NavLink, useParams} from 'react-router-dom';
+import { AuctionsProfile,AuctionsData } from './AuctionsData';
 import { useState } from 'react';
 import {FiArrowRightCircle} from 'react-icons/fi';
 import {HiEye} from 'react-icons/hi'
 import BidSection from './BidSection';
 
 const AuctionLive = ({useNavigate}) => {
+    const {name} = useParams();
     const navigate = useNavigate();
+    const selected = AuctionsData.find(prod => prod.name ===name);
     const [bid, setBid] = useState('');
     const [bidss, updateBids] = useState(AuctionsProfile);
 
@@ -28,30 +30,35 @@ const AuctionLive = ({useNavigate}) => {
         }
         setBid('');
     }
-
     
   return (
-    <div className='w-full space-y-10 bg-body-bg overflow-x-hidden pb-10 text-header-p font-normal h-full' >
+    <div className='w-full space-y-10 bg-body-bg overflow-hidden pb-10 text-header-p font-normal h-full' >
         <div className="w-5/6 mx-auto ">
-            <div className="ftdescription-body mt-16 space-y-10">
+            <div className=" mt-16 space-y-10 sm:min-w-full">
                 <h4 className="text-24 cursor-pointer font-semibold"><span className='text-[#BCB7B7]'><NavLink to='/'>Home / </NavLink><NavLink to='/AuctionsPage'>Auctions / </NavLink></span> Live bid</h4>
                 
-                <div className="main-auctions-outer border h-[95vh] flex sm:flex-column sm:w-full">
+                <div className="main-auctions-outer border h-[95vh] flex sm:flex-column sm:w-full sm:h-screen sm:border-none">
 
-                    <div className="main-auction-left w-3/6 h-full text-white flex-column justify-between py-3 px-6 relative sm:fixed sm:min-w-full sm:h-screen sm:top-0 sm:-right-1 sm:justify-start sm:items-center sm:space-y-56">
-                        <div className='!flex-center '>
-                            <h4 className='pb-10 text-24 lg:hidden med:hidden sm:pb-0'>Tag: Lost or Wither</h4>
-                            <button  onClick={()=>navigate('/AuctionsPage')} className="flex"><i className="fa fa-xmark bg-[#b8b4b47d] rounded-full px-3 py-1 text-2xl sm:hidden"></i></button>
-                            <div className='sm:space-x-2  sm:flex lg:hidden med:hidden'>
-                                <button className='bg-light-blue rounded-xl py-0 px-3 text-15 sm:text-xs sm:rounded-sm sm:py-1'>Live</button>
-                                <button className='bg-[#ffffff66] px-3 text-xs rounded-sm py-1 lg-hidden flex-center'><HiEye className='mr-2'/>295</button>
-                            </div>
-                            <button  onClick={()=>navigate('/AuctionsPage')}><i className="fa fa-xmark  text-base lg:hidden med:hidden"></i></button>
+                    <div className={`h-full w-3/6 relative sm:fixed sm:top-0 sm:left-0 sm:min-w-[100vw]`} >
+                        <div className=' w-full h-full z-0'>
+                            <img src={selected.image} alt="" className='h-full w-full z-0 absolute top-0 left-0 sm:relative'/>
+                            <div className='top-0 left-0 w-full h-full bg-black lg:hidden absolute bg-opacity-70'></div>
                         </div>
-                        <h3 className='text-48 place-self-center font-semibold'>
-                            {`Current bid $4500`}
-                        </h3>
-                        <h4 className='pb-10 text-24 sm:hidden'>Tag: Lost or Wither</h4>
+                        <div className='main-auction-left top-[-100%]'>
+                            <div className='!flex-center !z-30'>
+                                <h4 className='pb-10 text-24 lg:hidden med:hidden sm:pb-0'>Tag: Lost or Wither</h4>
+                                <button  onClick={()=>navigate('/AuctionsPage')} className="flex"><i className="fa fa-xmark bg-[#b8b4b47d] rounded-full px-3 py-1 text-2xl sm:hidden"></i></button>
+                                <div className='sm:space-x-2  sm:flex lg:hidden med:hidden'>
+                                    <button className='bg-light-blue rounded-xl py-0 px-3 text-15 sm:text-xs sm:rounded-sm sm:py-1'>Live</button>
+                                    <button className='bg-[#ffffff66] px-3 text-xs rounded-sm py-1 lg-hidden flex-center'><HiEye className='mr-2'/>295</button>
+                                </div>
+                                <button  onClick={()=>navigate('/AuctionsPage')}><i className="fa fa-xmark  text-base lg:hidden med:hidden"></i></button>
+                            </div>
+                            <h3 className='text-48 place-self-center font-semibold !z-30 sm:relative sm:top-[-60%] sm:translate-y-[60%]'>
+                                {`Current bid $4500`}
+                            </h3>
+                            <h4 className='pb-10 text-24 sm:hidden !z-30 '>Tag: Lost or Wither</h4>
+                        </div>
                     </div>
 
 
