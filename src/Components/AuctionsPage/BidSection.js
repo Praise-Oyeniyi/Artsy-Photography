@@ -8,7 +8,7 @@ const BidSection = ({bidFunction, setBid, addBid, bidss,bid}) => {
 
   return (
     
-    <div className="main-auction-r-inner h-full sm:fixed sm:w-screen sm:h-[40vh] sm:top-[52vh] sm:left-5 ">
+    <div className="main-auction-r-inner h-full sm:fixed sm:w-screen sm:h-[40vh] sm:top-[50vh] sm:left-5 ">
         <div className="bids space-y-5 h-[85%] overflow-y-auto scrollbar-hide" >
             {bidss.map(e=>(
                 <div className="profile flex-center justify-start gap-x-5" key={e.id}>

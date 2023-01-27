@@ -37,12 +37,12 @@ const AuctionLive = ({useNavigate}) => {
             <div className=" mt-16 space-y-10 sm:min-w-full">
                 <h4 className="text-24 cursor-pointer font-semibold"><span className='text-[#BCB7B7]'><NavLink to='/'>Home / </NavLink><NavLink to='/AuctionsPage'>Auctions / </NavLink></span> Live bid</h4>
                 
-                <div className="main-auctions-outer border h-[95vh] flex sm:flex-column sm:w-full sm:h-screen sm:border-none">
+                <div className="main-auctions-outer border h-[95vh] flex sm:flex-column sm:w-min-w-[100vw] sm:h-screen sm:border-none ">
 
                     <div className={`h-full w-3/6 relative sm:fixed sm:top-0 sm:left-0 sm:min-w-[100vw]`} >
                         <div className=' w-full h-full z-0'>
                             <img src={selected.image} alt="" className='h-full w-full z-0 absolute top-0 left-0 sm:relative'/>
-                            <div className='top-0 left-0 w-full h-full bg-black lg:hidden absolute bg-opacity-70'></div>
+                            <div className='top-0 left-0 w-full h-full bg-black lg:hidden absolute bg-opacity-70 tab:hidden med:hidden pointer-events-none'></div>
                         </div>
                         <div className='main-auction-left top-[-100%]'>
                             <div className='!flex-center !z-30'>
