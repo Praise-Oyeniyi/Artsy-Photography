@@ -34,7 +34,7 @@ const CartNotEmpty = ({cart,deleteItem,navigate,Half, Halved,cartItemsAdd,cartIt
                 </ul>
                 <h4 className={`text-lg font-semibold sm:mx-3 text-[#BCB7B7] lg:hidden pb-12 ${Half !== 'shopping'? 'hidden': ''}`}><NavLink to='/'>Home</NavLink> / <NavLink to='/MarketPlace'>Marketplace</NavLink> / <span className='text-black font-semibold'> Cart</span></h4>
 
-                <div className={`carts-items-outer sm:px-3 relative ${Half ==='shipping'?'flex-center items-start gap-x-10':'mb-48'}`}>
+                <div className={`carts-items-outer sm:px-3 relative ${Half ==='shipping'?'flex-center items-start gap-x-10':'mb-48 sm:mb-0'}`}>
                     <div className={`payment hidden ${Half === 'payment'?'!block': ''}`}>
                        <Payment CartTotal={CartTotal} itemTotal={itemTotal} cart={cart} updateCart={updateCart} Halved={Halved}/>
                     </div>

@@ -15,7 +15,7 @@ const Slider = () => {
       const firstItem = myArray[0];
       const restOfItems = myArray.slice(1);
       setMyArray([...restOfItems, firstItem]);
-    }, 5000);
+    }, 3000);
     return () => clearInterval(intervalId);
   }, [myArray]);
 
@@ -29,11 +29,11 @@ const Slider = () => {
           <img src={slide4} alt="slide-pics" className='sm:w-full border-x-8 border-x-[transparent] h-80 sm:absolute top-0 left-0 z-10 sm:h-80'/>
       </div>
 
-      <div className='w-full sm:hidden slider py-10 flex  items-center justify-start relative tab:hidden med:hidden'>
+      <div className='w-full sm:hidden slider py-10 flex items-center justify-start relative tab:hidden med:hidden'>
         {myArray.map((image, index)=>(
-          <div className='relative left-0 slide-left' key={index}>
-            {myArray[0]?'':<div className='absolute bg-body-bg top-0 h-full z-20 w-5    animation-fill-mode: forwards mx-10'></div>}
-            <img src={image} alt="slide-pics" className={`min-w-[23em] h-full z-10 relative `}/>
+          <div className='relative slide-left' key={index}>
+            <div className={`absolute bg-body-bg -top-3 h-[30rem] z-20 w-6 ${index ===0? '-left-7':'-left-5'}`}></div>
+            <img src={image} alt="slide-pics" className={`min-w-[23em] h-full z-10 relative left-0`}/>
           </div>
         ))}
         

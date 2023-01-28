@@ -68,7 +68,7 @@ const DetailsForm = ({Half, Halved}) => {
             <button className='px-16 sm:rounded-sm sm:px-8 sm:mx-auto h-20 sm:h-12 bg-blue w-full rounded-lg text-24 sm:w-4/6 text-white flex-center justify-center' type='submit'>
                 Proceed to payment
             </button>
-            <p className='text-24 text-blue border-b border-blue font-medium cursor-pointer mx-auto w-fit lg:hidden !mt-3' onClick={()=>navigate('/MarketPlace')}>Go back to cart </p>
+            <p className='text-24 text-blue border-b border-blue font-medium cursor-pointer mx-auto w-fit lg:hidden !mt-3' onClick={()=>Halved('shopping')}>Go back to cart </p>
             
         </form>
     </div>
