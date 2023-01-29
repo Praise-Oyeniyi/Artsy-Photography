@@ -12,8 +12,8 @@ const Featured = ({next, useNavigate, FtData}) => {
   return (
     <div className="featured w-full pb-20 sm:pb-8">
 
-        <div className="featured-inner w-5/6 mx-auto space-y-10">
-          <h3 className="featured-header pb-6 featured-border text-48 font-medium sm:text-28">
+        <div className="featured-inner w-5/6 mx-auto space-y-10 sm:w-[97%]">
+          <h3 className="featured-header pb-6 featured-border text-48 font-medium sm:text-28 sm:border-none sm:!pb-0 sm:font-extrabold">
             Featured Products
           </h3>
 
