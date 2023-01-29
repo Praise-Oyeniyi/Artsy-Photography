@@ -12,7 +12,7 @@ const Featured = ({next, useNavigate, FtData}) => {
   return (
     <div className="featured w-full pb-20 sm:pb-8">
 
-        <div className="featured-inner w-5/6 mx-auto space-y-10 sm:w-[97%]">
+        <div className="featured-inner w-5/6 mx-auto space-y-10 sm:w-[95%]">
           <h3 className="featured-header pb-6 featured-border text-48 font-medium sm:text-28 sm:border-none sm:!pb-0 sm:font-extrabold">
             Featured Products
           </h3>
@@ -24,10 +24,10 @@ const Featured = ({next, useNavigate, FtData}) => {
                 <div className={`featured-product-img w-full  ${e.id%2===0? 'order-2 ml-10 sm:order-1 sm:ml-0':''}`} onClick={()=>navigate(`/market/${e.id}`)}>
                   <img src={e.image} alt="" className='w-full sm:h-[15em]' />
                   
-                  <div className='featured-pd-effect sm:flex-col sm:justify-start p-10'>
+                  <div className='featured-pd-effect sm:flex-col sm:justify-start p-10 sm:px-0'>
                     <p className='featured-pd-effect-text sm:hidden' onClick={()=>navigate(`/market/${e.id}`)}>View Product</p>
-                    <p className='lg:hidden text-white text-3xl font-bold pb-10 header-main text-center'>{e.name}</p>
-                    <img src={next} alt="marketplace-icon" className='border border-white rounded-full p-3 h-12 w-12 sm:place-self-end' onClick={()=>navigate(`/market/${e.id}`)}/>
+                    <p className='lg:hidden text-white text-3xl font-bold pb-10 header-main text-center'>{window.innerWidth <= 519?'Boolean Egyptian':e.name}</p>
+                    <img src={next} alt="marketplace-icon" className='border border-white rounded-full p-3 h-12 w-12 sm:place-self-end sm:!mr-10' onClick={()=>navigate(`/market/${e.id}`)}/>
                   </div>
                 </div>
 
@@ -36,8 +36,8 @@ const Featured = ({next, useNavigate, FtData}) => {
                   <p className='text-24 sm:text-15'>{e.description}</p>
                   <div className='flex-center'>
 
-                    <div className="flex-center justify-start space-x-8 sm:justify-between sm:mt-5">
-                      <div className="w-2/6 images relative h-12 sm:h-10">
+                    <div className="flex-center justify-start space-x-8 sm:justify-start sm:mt-5 sm:space-x-16">
+                      <div className="w-2/6 images relative h-12 sm:h-8">
                         <img src={Avatar1} alt="" className="featured-avatar" />
                         <img src={Avatar2} alt="" className="featured-avatar left-8" />
                         <img src={Avatar3} alt="" className="featured-avatar left-16" />
