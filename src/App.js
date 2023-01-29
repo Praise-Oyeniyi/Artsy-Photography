@@ -89,13 +89,12 @@ function App() {
       left:0,
       opacity:1,
       transition: {
-        duration: .5,
-        delay:0.05,
+        duration: .3,
         type:'ease',
       },
     },
     exit:{
-      opacity:0,
+      opacity:0.2,
     }
   };
 
